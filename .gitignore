@@ -69,3 +69,4 @@ ebextensions/
 # OS generated files
 .DS_Store
 Thumbs.db
+/src/main/resources/application-oauth.yaml
