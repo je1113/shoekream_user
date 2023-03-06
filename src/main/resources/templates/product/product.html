@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SHOEKREAM | 한정판 거래의 FLEX</title>
+        <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico">
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+                integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <!-- chart.js cdn -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+        
+        <link rel="stylesheet" href="/css/product/product.css">
+        <link rel="stylesheet" href="/css/fragment/footer.css">
+        <link rel="stylesheet" href="/css/fragment/header.css">
+        <style>
+            .layer_header {
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="__nuxt">
+            <div class="__layout">
+                <div tabindex="0" class="wrap etc lg">
+                    <!-- 헤더 시작 -->
+                    <header th:replace="/fragment/header.html :: header"></header>
+                    <!-- 헤더 끝 -->
+
+                    <!-- 컨텐츠 시작 -->
+                    <div class="container detail lg">
+                        <div class="content">
+                            <h2 class="blind">상품 상세</h2>
+                            <div class="column_bind">
+                                <!-- 상품 사진 시작 -->
+                                <div class="column is_fixed" id="slide_img">
+                                    <div class="spread"></div><div class="column_box" style="width: 560px;">
+                                        <div class="detail_banner_area lg">
+                                            <div dir="ltr" class="banner_slide detail_slide slick-slider slick-initialized">
+                                                <div class="slick-list">
+                                                    <div class="slick-track" style="width: 2240px; opacity: 1;">
+                                                        <div tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active slick-current" style="outline: none; width: 560px; position: relative; left: 0px; opacity: 1; transition: opacity 500ms ease 0s, visibility 500ms ease 0s;">
+                                                            <div>
+                                                                <div tabindex="-1" class="slide_content" style="width: 100%; display: inline-block;">
+                                                                    <div href="/" class="slide_item" style="background-color: rgb(235, 240, 245);">
+                                                                        <div class="item_inner">
+                                                                            <div class="product" style="background-color: rgb(235, 240, 245);">
+                                                                                <div class="product_img_start">
+                                                                                    <picture class="picture product_img">
+                                                                                        <img alt="상품 이미지" src="" loading="lazy" fetchpriority="high" class="image img" id="previewImg2">
+                                                                                    </picture>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 상품 사진 끝 -->
+                                <div class="column rect">
+                                    <div class="column_box">
+                                        <!-- 상품 정보 시작 -->
+                                        <div class="column_top">
+                                            <div class="detail_main_title lg">
+                                                <div class="main_title_box">
+                                                    <div>
+                                                        <a th:href="@{/brand/{brandName}(brandName=${product.data.brand})}" class="brand">Nike</a>
+                                                    </div>
+                                                    <p class="title name">Nike x Supreme Air Force 1 Low White</p>
+                                                    <p class="sub_title nameKor">나이키 x 슈프림 에어포스 1 로우 화이트</p>
+                                                </div>
+                                            </div>
+                                            <div class="product_figure_wrap lg">
+                                                <div title="모든 사이즈" option-title="사이즈" class="detail_size">
+                                                    <div class="title">
+                                                        <span class="title_txt">사이즈</span>
+                                                    </div>
+                                                    <div class="size">
+                                                        <a class="btn_size">
+                                                            <div style="display: flex;">
+                                                                <span class="btn_text input_text it1 size" style="padding-top: 3px;">230</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="detail_price">
+                                                    <div class="title">
+                                                        <span class="title_txt">최근 거래가</span>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="amount">
+                                                            <span class="num recentPrice">230,000</span>
+                                                        </div>
+                                                        <div class="fluctuation">
+                                                            <p class="fluctuation" style="margin: 0;">가격변동</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn_wrap">
+                                                <div class="division_btn_box lg">
+                                                    <a class="btn_division buy" th:href="@{/buy/check/{productIdx}(productIdx=${proIdx})}">
+                                                        <strong class="title">구매</strong>
+                                                        <div class="price">
+                                                            <span class="amount">
+                                                                <em class="num nowBuy">340,000원</em>
+                                                            </span>
+                                                            <span class="desc">즉시 구매가</span>
+                                                        </div>
+                                                    </a>
+                                                    <a class="btn_division sell" th:href="@{/sell/check/{productIdx}(productIdx=${proIdx})}">
+                                                        <strong class="title">판매</strong>
+                                                        <div class="price">
+                                                            <span class="amount">
+                                                                <em class="num nowSell">250,000원</em>
+                                                            </span>
+                                                            <span class="desc">즉시 판매가</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <a class="btn full outlinegrey large btn_wish wish_save" aria-label="관심상품">
+                                                    <img src="/img/select_mark_off.PNG" class="icon sprite-icons wish-onoff">
+                                                    <span class="btn_text" id="wish_proIdx" style="padding-left: 5px;" th:value="${proIdx}">관심상품</span>
+                                                    <div class="wish_count" style="padding-left: 5px;">
+                                                        <span class="wish_count_num wishCount" id="wishCount" th:value="${isWish}">1.4만</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product_info_wrap" id="product_info_wrap">
+                                            <h3 class="detail_title info_title lg">상품 정보</h3>
+                                            <div class="detail_product_wrap">
+                                                <dl class="detail_product" style="margin: 0;">
+                                                    <div class="detail_box model_num">
+                                                        <dt class="product_title">모델번호</dt>
+                                                        <dd class="product_info modelNum">DM7708-100</dd>
+                                                    </div>
+                                                    <div class="detail_box">
+                                                        <dt class="product_title">출시일</dt>
+                                                        <dd class="product_info releaseDate">21/08/12</dd>
+                                                    </div>
+                                                    <div class="detail_box">
+                                                        <dt class="product_title">컬러</dt>
+                                                        <dd class="product_info color">BLACK/WHITE-RED-BLUE</dd>
+                                                    </div>
+                                                    <div class="detail_box">
+                                                        <dt class="product_title">발매가</dt>
+                                                        <dd class="product_info firstPrice">129,000원</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <!-- 상품 정보 끝 -->
+    
+                                        <!-- 배송 정보 시작 -->
+                                        <div class="delivery_way_wrap">
+                                            <h3 class="detail_title lg">배송 정보</h3>
+                                            <div class="delivery_way">
+                                                <div class="way_info">
+                                                    <div class="way_status_thumb">
+                                                        <img src="/img/delivery.png" alt="3,000원" class="way_img">
+                                                    </div>
+                                                    <div class="way_desc">
+                                                        <p class="company">
+                                                            <span class="badge_title">일반배송</span>
+                                                            <span class="title">3,000원</span>
+                                                        </p>
+                                                        <p class="sub_text">검수 후 배송 ・ 5-7일 내 도착 예정</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 배송 정보 끝 -->
+    
+                                        <!-- 시세 시작 -->
+                                        <div class="detail_wrap">
+                                            <div class="product_sales_graph">
+                                                <div class="title" style="height: 84px;">
+                                                    <h3 class="detail_title lg">시세</h3>
+                                                    <div class="sales_filter lg">
+                                                        <div class="filter_unit">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 시세 = 그래프 있을때 -->
+<!--                                                <div class="wrap_sales"  th:if="${!#lists.isEmpty(conclusion)}">-->
+                                                <div class="wrap_sales">
+                                                    <div class="tab_area">
+                                                        <ul role="tablist" class="tab_list">
+                                                            <li id="graph1mm" role="tab" aria-selected="false" aria-controls="sales_panel1" class="date item">
+                                                                <a class="item_link">1개월</a>
+                                                            </li>
+                                                            <li id="graph3mm" role="tab" aria-selected="false" aria-controls="sales_panel2" class="date item">
+                                                                <a class="item_link">3개월</a>
+                                                            </li>
+                                                            <li id="graph6mm" role="tab" aria-selected="false" aria-controls="sales_panel3" class="date item">
+                                                                <a class="item_link">6개월</a>
+                                                            </li>
+                                                            <li id="graph1yy" role="tab" aria-selected="false" aria-controls="sales_panel4" class="date item">
+                                                                <a class="item_link">1년</a>
+                                                            </li>
+                                                            <li id="graphallall" role="tab" aria-selected="true" aria-controls="sales_panel5" class="date item on">
+                                                                <a class="item_link">전체</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div id="sales_panel1" role="tabpanel" span="1m" class="tab_content">
+                                                            <div class="graph">
+                                                                <canvas id="graph1m" class="tc" width="0" height="0" style="display: none; box-sizing: border-box; height: 200px; width: 560px;"></canvas>
+                                                            </div>
+                                                        </div>
+                                                        <div id="sales_panel2" role="tabpanel" span="3m" class="tab_content">
+                                                            <div class="graph">
+                                                                <canvas id="graph3m" class="tc" width="0" height="0" style="display: none; box-sizing: border-box; height: 200px; width: 560px;"></canvas>
+                                                            </div>
+                                                        </div>
+                                                        <div id="sales_panel3" role="tabpanel" span="6m" class="tab_content">
+                                                            <div class="graph">
+                                                                <canvas id="graph6m" class="tc" width="0" height="0" style="display: none; box-sizing: border-box; height: 200px; width: 560px;"></canvas>
+                                                            </div>
+                                                        </div>
+                                                        <div id="sales_panel4" role="tabpanel" span="1y" class="tab_content">
+                                                            <div class="graph">
+                                                                <canvas id="graph1y" class="tc" width="0" height="0" style="display: none; box-sizing: border-box; height: 200px; width:560px;"></canvas>
+                                                            </div>
+                                                        </div>
+                                                        <div id="sales_panel5" role="tabpanel" span="all" class="tab_content show">
+                                                            <div class="graph">
+                                                                <canvas id="graphall" class="tc" width="560" height="200" style="display: block; box-sizing: border-box; height: 200px; width: 560px;"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 시세 - 거래 내역 있을때 -->
+<!--                                                <div class="wrap_bids" th:if="${!#lists.isEmpty(conclusion)}">-->
+                                                <div class="wrap_bids" id="wrap_bids">
+                                                    <div class="tab_area">
+                                                        <ul role="tablist" class="tab_list" id="tab_list">
+                                                            <li role="tab" aria-selected="true" aria-controls="panel1" class="conclusion item on">
+                                                                <a class="item_link">체결 거래</a>
+                                                            </li>
+                                                            <li role="tab" aria-selected="false" aria-controls="panel2" class="conclusion item">
+                                                                <a class="item_link">판매 입찰</a>
+                                                            </li>
+                                                            <li role="tab" aria-selected="false" aria-controls="panel3" class="conclusion item">
+                                                                <a class="item_link">구매 입찰</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div id="panel1" role="tabpanel" span="sales" class="tw tab_content show">
+                                                            <div class="table_wrap lg">
+                                                                <table>
+                                                                    <caption>
+                                                                        <span class="blind">데이터 테이블</span>
+                                                                    </caption>
+                                                                    <colgroup>
+                                                                        <col style="width:29.76%;">
+                                                                        <col style="width:36.52%;">
+                                                                        <col style="width:33.72%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="table_th">사이즈</th>
+                                                                            <th class="table_th align_right">거래가</th>
+                                                                            <th class="table_th align_right">거래일</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="panel1_tbody">
+                                                                        <tr class="panel1_tr">
+                                                                            <td class="table_td size">270</td>
+                                                                            <td class="table_td align_right price">229,000원</td>
+                                                                            <td class="table_td align_right createdAt"><time>22/12/22</time></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <a class="plusbtn btn outlinegrey full medium">체결 내역 더보기</a>
+                                                        </div>
+                                                        <div id="panel2" role="tabpanel" span="asks" class="tw tab_content">
+                                                            <div class="table_wrap lg">
+                                                                <table>
+                                                                    <caption>
+                                                                        <span class="blind">데이터 테이블</span>
+                                                                    </caption>
+                                                                    <colgroup>
+                                                                        <col style="width:29.76%;">
+                                                                        <col style="width:36.52%;">
+                                                                        <col style="width:33.72%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="table_th">사이즈</th>
+                                                                            <th class="table_th align_right">판매 희망가</th>
+                                                                            <th class="table_th align_right">입찰일</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="panel2_tbody">
+                                                                        <tr class="panel2_tr">
+                                                                            <td class="table_td size">260</td>
+                                                                            <td class="table_td align_right price">214,000원</td>
+                                                                            <td class="table_td align_right createdAt"><time>22/12/22</time></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <a class="plusbtn btn outlinegrey full medium">판매 입찰 내역 더보기</a>
+                                                        </div>
+                                                        <div id="panel3" role="tabpanel" span="bids" class="tw tab_content">
+                                                            <div class="table_wrap lg">
+                                                                <table>
+                                                                    <caption>
+                                                                        <span class="blind">데이터 테이블</span>
+                                                                    </caption>
+                                                                    <colgroup>
+                                                                        <col style="width:29.76%;">
+                                                                        <col style="width:36.52%;">
+                                                                        <col style="width:33.72%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="table_th">사이즈</th>
+                                                                            <th class="table_th align_right">구매 희망가</th>
+                                                                            <th class="table_th align_right">입찰일</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="panel3_tbody">
+                                                                        <tr class="panel3_tr">
+                                                                            <td class="table_td size">280</td>
+                                                                            <td class="table_td align_right price">303,000원</td>
+                                                                            <td class="table_td align_right createdAt"><time>23/01/22</time></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <a class="plusbtn btn outlinegrey full medium">구매 입찰 내역 더보기</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 시세 끝 -->
+    
+                                            <!-- 구매전확인사항 시작 -->
+                                            <div>
+                                                <div class="confirm_wrap" id="confirm_wrap">
+                                                    <h3 class="confirm_title">구매 전 꼭 확인해주세요!</h3>
+                                                    <div class="confirm_content">
+                                                        <ul class="dropdown_list" style="margin: 0;">
+                                                            <li class="">
+                                                                <div class="dropdown">
+                                                                    <div class="dropdown_head">
+                                                                        <p class="title">배송 기간 안내</p>
+                                                                        <img src="/img/down.png" class="icon sprite-icons ico-arr-down-gray">
+                                                                    </div>
+                                                                    <div class="dropdown_content dc">
+                                                                        <div class="content" id="ct3">
+                                                                            <div class="content_box">
+                                                                                <div class="emphasis_box">
+                                                                                    <strong class="emphasis">KREAM은 최대한 빠르게 모든 상품을 배송하기 위해 노력하고 있습니다. 배송 시간은 판매자가 검수를 위하여 상품을 검수센터로 보내는 속도에 따라 차이가 있습니다.</strong>
+                                                                                </div>
+                                                                                <ul class="content_list">
+                                                                                    <li class="content_item">
+                                                                                        <p class="title_txt"> [일반 구매] </p>
+                                                                                    </li>
+                                                                                    <li class="content_item">
+                                                                                        <p class="main_txt"> - 거래가 체결된 시점부터 48시간(일요일•공휴일 제외) 내에 판매자가 상품을 발송해야 하며, 통상적으로 발송 후 1-2일 내에 KREAM 검수센터에 도착합니다. </p>
+                                                                                    </li>
+                                                                                    <li class="content_item">
+                                                                                        <p class="main_txt"> - 검수센터에 도착한 상품은 입고 완료 후 3영업일 이내에 검수를 진행합니다. 검수 합격시 배송을 준비합니다.</p>
+                                                                                        <p class="sub_txt">* 상품 종류 및 상태에 따라 검수 소요 시간은 상이할 수 있으며, 구매의사 확인에 해당할 경우 구매자와 상담 진행으로 인해 지연이 발생할 수 있습니다.</p>
+                                                                                    </li>
+                                                                                    <li class="content_item">
+                                                                                        <p class="main_txt"> - 검수센터 출고는 매 영업일에 진행하고 있으며, 출고 마감시간은 오후 5시입니다. 출고 마감시간 이후 검수 완료건은 운송장번호는 입력되지만 다음 영업일에 출고됩니다.</p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="">
+                                                                <div class="dropdown">
+                                                                    <div class="dropdown_head">
+                                                                        <p class="title">검수 안내</p>
+                                                                        <img src="/img/down.png" class="icon sprite-icons ico-arr-down-gray">
+                                                                    </div>
+                                                                    <div class="dropdown_content dc">
+                                                                        <div class="content">
+                                                                            <div class="content_box">
+                                                                                <div class="emphasis_box">
+                                                                                    <strong class="emphasis">판매자의 상품이 검수센터에 도착하면 전담 검수팀이 철저한 분석과 검사로 정가품 확인을 진행합니다.</strong>
+                                                                                </div>
+                                                                                <ul class="content_list">
+                                                                                    <li class="content_item">
+                                                                                        <p class="main_txt"> - 검수센터에서는 정가품 여부를 확인하기 위하여, 지속적으로 데이터를 쌓고 분석하여 기록하고 있습니다. 
+                                                                                        </p>
+                                                                                    </li>
+                                                                                    <li class="content_item">
+                                                                                        <p class="main_txt"> - 업계 전문가로 구성된 검수팀은 박스와 상품의 라벨에서 바느질, 접착, 소재 등 모든 것을 검수합니다.
+                                                                                        </p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="content_box ">
+                                                                                <div class="emphasis_box">
+                                                                                    <strong class="emphasis">검수 결과는 불합격•검수 보류•합격의 세가지 상태로 결과가 변경됩니다.</strong>
+                                                                                    <a class="txt_link">검수기준 보기</a>
+                                                                                </div>
+                                                                                <ul class="content_list">
+                                                                                    <li class="content_item">
+                                                                                        <p class="sub_txt">* 검수 합격: KREAM 검수택(Tag)이 부착되어 배송을 준비함</p>
+                                                                                    </li>
+                                                                                    <li class="content_item">
+                                                                                        <p class="sub_txt">* 검수 보류: 앱에서 사진으로 상품의 상태 확인 및 구매 여부를 선택. (24시간 이후 자동 검수 합격)</p>
+                                                                                    </li>
+                                                                                    <li class="content_item">
+                                                                                        <p class="sub_txt">* 검수 불합격: 즉시 거래가 취소되고 구매하신 금액을 환불 처리함.(환불 수단은 결제 수단과 동일)</p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="">
+                                                                <div class="dropdown">
+                                                                    <div class="dropdown_head">
+                                                                        <p class="title">구매 환불/취소/교환 안내</p>
+                                                                        <img src="/img/down.png" class="icon sprite-icons ico-arr-down-gray">
+                                                                    </div>
+                                                                    <div class="dropdown_content dc">
+                                                                        <div class="content">
+                                                                            <div class="content_box">
+                                                                                <div class="emphasis_box">
+                                                                                    <strong class="emphasis">KREAM은 익명 거래를 기반으로 판매자가 판매하는 상품을 구매자가 실시간으로 구매하여 거래를 체결합니다.</strong>
+                                                                                </div>
+                                                                                <ul class="content_list">
+                                                                                    <li class="content_item">
+                                                                                        <p class="main_txt"> - 단순 변심이나 실수에 의한 취소/교환/반품이 불가능합니다. 상품을 원하지 않으시는 경우 언제든지 KREAM에서 재판매를 하실 수 있습니다.</p>
+                                                                                    </li>
+                                                                                    <li class="content_item">
+                                                                                        <p class="main_txt"> - 상품 수령 후, 이상이 있는 경우 KREAM 고객센터로 문의해주시기 바랍니다.</p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="point_guide lg">
+                                                    <ul class="guide_list">
+                                                        <li class="guide_item">
+                                                            <div class="thumb_area">
+                                                                <img src="/img/product_check1.png" alt="" class="img">
+                                                            </div>
+                                                            <div class="text_area">
+                                                                <strong class="title">100% 정품 보증</strong>
+                                                                <p class="desc">KREAM에서 검수한 상품이 정품이 아닐 경우, 구매가의 3배를 보상합니다.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="guide_item">
+                                                            <div class="thumb_area">
+                                                                <img src="/img/product_check2.png" alt="" class="img" style="margin-top: 5px;">
+                                                            </div>
+                                                            <div class="text_area">
+                                                                <strong class="title">엄격한 다중 검수</strong>
+                                                                <p class="desc">모든 상품은 검수센터에 도착한 후, 상품별 전문가 그룹의 체계적인 시스템을 거쳐 검수를 진행합니다.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="guide_item">
+                                                            <div class="thumb_area">
+                                                                <img src="/img/product_check3.png" alt="" class="img">
+                                                            </div>
+                                                            <div class="text_area">
+                                                                <strong class="title">정품 인증 패키지</strong>
+                                                                <p class="desc">검수에 합격한 경우에 한하여 KREAM의 정품 인증 패키지가 포함된 상품이 배송됩니다.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <p class="meditaion_notice_product" id="meditaion_notice_product"> 크림(주)는 통신판매 중개자로서 통신판매의 당사자가 아닙니다. 본 상품은 개별판매자가 등록한 상품으로 상품, 상품정보, 거래에 관한 의무와 책임은 각 판매자에게 있습니다. 단, 거래과정에서 검수하고 보증하는 내용에 대한 책임은 크림(주)에 있습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- 구매전 확인사항 끝 -->
+
+                                        <!-- 체결 내역 더보기 시작 -->
+                                        <div class="layer_market_price layer lg" style="display: none;">
+                                            <div class="layer_container">
+                                                <a class="btn_layer_close" onclick="conPopdown()">
+                                                    <img src="/img/close.png" class="ico-close icon sprite-icons"/>
+                                                </a>
+                                                <div class="layer_header">
+                                                    <h2 class="title">시세</h2>
+                                                </div>
+                                                <div class="layer_content">
+                                                    <div class="buy_product">
+                                                        <div class="product" style="background-color: rgb(235, 240, 245);">
+                                                            <picture class="picture product_img">
+                                                                <img alt="상품 이미지" src="" loading="lazy" class="image img" id="previewImg4">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="buy_info">
+                                                            <div class="model_info">
+                                                                <strong class="model_number">
+                                                                    <span class="text"></span>
+                                                                </strong>
+                                                                <p class="model_title name">상품명</p>
+                                                                <p class="model_ko nameKor">상품명(KOR)</p>
+                                                                <div class="size_select_wrap">
+                                                                    <button type="button" class="btn btn_size" slot="button">
+                                                                        <span class="size input_text">모든 사이즈</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="tab_info">
+                                                        <div class="tab_area" id="user_conclusion">
+                                                            <ul role="tablist" class="tab_list">
+                                                                <li id="plus1" role="tab" aria-selected="true" aria-controls="panel1" class="plus item on">
+                                                                    <a class="item_link">체결 거래</a>
+                                                                </li>
+                                                                <li id="plus2" role="tab" aria-selected="false" aria-controls="panel2" class="plus item">
+                                                                    <a class="item_link">판매 입찰</a>
+                                                                </li>
+                                                                <li id="plus3" role="tab" aria-selected="false" aria-controls="panel3" class="plus item">
+                                                                    <a class="item_link">구매 입찰</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div id="panel11" role="tabpanel" class="tcl tab_content show" span="sales">
+                                                                <div class="price_table">
+                                                                    <div class="market_price_table">
+                                                                        <div class="price_head">
+                                                                            <div class="head_box hb1">
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt">사이즈</span></a></div>
+                                                                                <div class="head_sort"><a  class="sort_link sort"><span class="sort_txt" style="margin-right: 10px;">거래가</span></a></div>
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt" style="margin-right: 15px;">거래일</span></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="con_price_body">
+                                                                            <div class="price_body">
+                                                                                <div class="body_list">
+                                                                                    <div class="list_txt size">270</div>
+                                                                                    <div class="list_txt price">218,000원</div>
+                                                                                    <div class="list_txt createdAt"><time>22/12/31</time></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!---->
+                                                                </div>
+                                                            </div>
+                                                            <div id="panel22" role="tabpanel" class="tcl tab_content" span="asks">
+                                                                <div class="price_table">
+                                                                    <div class="market_price_table">
+                                                                        <div class="price_head">
+                                                                            <div class="head_box">
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt">사이즈</span></a></div>
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt">판매 희망가</span></a></div>
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt">입찰일</span></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="sell_price_body">
+                                                                            <div class="price_body">
+                                                                                <div class="body_list">
+                                                                                    <div class="list_txt size">270</div>
+                                                                                    <div class="list_txt price">218,000원</div>
+                                                                                    <div class="list_txt createdAt"><time>22/12/31</time></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="empty_content lg" style="display: none;">
+                                                                        <div class="empty_bg"><span class="blind">빈 데이터 이미지</span></div>
+                                                                        <p class="empty_text">판매 희망가가 아직 없습니다</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="panel33" role="tabpanel" class="tcl tab_content" span="bids">
+                                                                <div class="price_table">
+                                                                    <div class="market_price_table">
+                                                                        <div class="price_head">
+                                                                            <div class="head_box">
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt">사이즈</span></a></div>
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt">구매 희망가</span></a></div>
+                                                                                <div class="head_sort"><a class="sort_link sort"><span class="sort_txt">입찰일</span></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="buy_price_body">
+                                                                            <div class="price_body">
+                                                                                <div class="body_list">
+                                                                                    <div class="list_txt size">270</div>
+                                                                                    <div class="list_txt price">218,000원</div>
+                                                                                    <div class="list_txt createdAt"><time>23/01/22</time></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="empty_content lg" style="display: none;">
+                                                                        <div class="empty_bg"><span class="blind">빈 데이터 이미지</span></div>
+                                                                        <p class="empty_text">구매 희망가가 아직 없습니다</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 체결 내역 더보기 끝 -->
+
+                                        <!-- 스크롤시 상단 고정 시작 -->
+                                        <div class="floating_price lg">
+                                            <div class="inner_box">
+                                                <div class="product_area">
+                                                    <div class="product_thumb" style="background-color: rgb(235, 240, 245);">
+                                                        <picture class="picture product_img">
+                                                            <img alt="상품 이미지" src="" loading="lazy" class="image img" id="previewImg3" style="width: 64px; height: 64px; margin-left: 40px;">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="product_info">
+                                                        <p class="name">상품명</p>
+                                                        <p class="translated_name nameKor">상품명(kor)</p>
+                                                    </div>
+                                                </div>
+                                                <div class="btn_area">
+                                                    <a class="btn outlinegrey large btn_wish btn_wish_simple" aria-label="관심상품">
+                                                        <img src="/img/select_mark_off.PNG" class="icon sprite-icons wish-onoff"/>
+                                                        <span class="wish_count_num wishCount" th:value="${isWish}" style="padding-left: 5px;">관심상품수</span>
+                                                    </a>
+                                                    <div class="division_btn_box lg">
+                                                        <a class="btn_division buy" th:href="@{/buy/check/{productIdx}(productIdx=${proIdx})}">
+                                                            <strong class="title">구매</strong>
+                                                            <div class="price">
+                                                                <span class="amount">
+                                                                    <em class="num nowBuy">즉시구매가</em>
+                                                                </span>
+                                                                <span class="desc">즉시 구매가</span>
+                                                            </div>
+                                                        </a>
+                                                        <a class="btn_division sell" th:href="@{/sell/check/{productIdx}(productIdx=${proIdx})}">
+                                                            <strong class="title">판매</strong>
+                                                            <div class="price">
+                                                                <span class="amount">
+                                                                    <em class="num nowSell">즉시판매가</em>
+                                                                </span>
+                                                                <span class="desc">즉시 판매가</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 스크롤시 상단 고정 끝 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 스타일 시작 -->
+                        <div>
+                            <div class="feed_area" id="feed_area">
+                                <h2 class="feed_title">
+                                    <span class="title">스타일</span>
+                                    <span class="num" id="style_cnt">1145</span>
+                                </h2>
+                                <div class="social_feeds">
+                                    <div transition-duration="0" item-selector=".item" gutter=".gutter_item" horizontal-order="true" class="masonry_posts" style="position: relative; height: 800px;">
+                                        <div class="gutter_item"></div>
+                                        <div class="feed_card item square" style="position: absolute; left: 0px; top: 0px;">
+                                            <a href="#">
+                                                <div class="card_box">
+                                                    <div class="social_img_box square">
+                                                        <picture class="picture social_img">
+                                                            <source type="image/webp" srcset="">
+                                                            <source srcset="">
+                                                            <img alt="소셜이미지" src="" loading="lazy" class="image"></picture>
+                                                    </div>
+                                                    <div class="card_detail">
+                                                        <div class="user_box">
+                                                            <picture class="picture img_profile">
+                                                                <source type="image/webp" srcset="">
+                                                                <source srcset="">
+                                                                <img alt="사용자 프로필 이미지" src="/img/kream_empty_img.png" loading="lazy" class="image">
+                                                            </picture>
+                                                            <p class="user_name">17_07.06</p>
+                                                            <span aria-label="좋아요" role="button" class="btn like">
+                                                                <img src="/img/smile.png" class="icon sprite-icons social-like-gray-sm"></img>
+                                                                <span class="like_count">26</span>
+                                                            </span>
+                                                        </div>
+                                                        <p class="text_box">코레아 우라 #나이키 #서울 #덩크서울 #크림</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="more_btn_box">
+                                        <button type="button" class="btn outlinegrey medium" onclick="tagPage()">더보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 스타일 끝 -->
+                            
+                            <!-- 브랜드 다른 상품 시작 -->
+                            <div class="other_product_area">
+                                <h3 class="more_title">
+                                    <span class="owner">Nike</span>
+                                    <span class="title_txt">의 다른 상품</span>
+                                    <a class="btn_more">
+                                        <span class="btn_txt">더보기</span>
+                                        <img src="/img/right_arrow.png" class="icon sprite-icons arr-right-gray">
+                                    </a>
+                                </h3>
+                                <div class="other_products">
+                                    <div class="product_list">
+                                        <div class="product_item">
+                                            <a href="" class="item_inner">
+                                                <div class="thumb_box">
+                                                    <div class="product" style="background-color:#ebf0f5;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand">
+                                                        <a href="" class="brand_link">
+                                                            <p class="brand-text without-wish brand">Nike</p>
+                                                        </a>
+                                                    </div>
+                                                    <p class="name">Nike Dunk Low SE Seoul (with Special Gift)</p>
+                                                    <p class="size" style="margin-top: 5px">240</p>
+                                                    <div class="price">
+                                                        <div class="amount lg">
+                                                            <em class="num nowBuy">265,000원</em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 브랜드 다른 상품 끝 -->
+                
+                    <!-- 푸터 시작 -->
+                    <footer th:replace="/fragment/footer.html :: footer"></footer>
+                    <!-- 푸터 끝 -->
+                </div>
+            </div>
+        </div>
+</body>
+    <script src="/js/product/product.js"></script>
+    <script src="/js/social/product_boards.js"></script>
+    <script src="/js/social/like.js"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        const conclusion = [[${conclusion}]];
+        //console.log(conclusion);
+
+        let now = new Date();	// 현재 날짜
+        let now1 = new Date();	// 한달전 현재 날짜
+        let now3 = new Date();	// 세달전 현재 날짜
+        let now6 = new Date();	// 여섯달전 현재 날짜
+        let now12 = new Date();	// 일년전 현재 날짜
+
+        function dateFormat(date) {
+            let dateFormat2 = date.getFullYear() +
+                '-' + ( (date.getMonth()+1) < 9 ? "0" + (date.getMonth()+1) : (date.getMonth()+1) )+
+                '-' + ( (date.getDate()) < 9 ? "0" + (date.getDate()) : (date.getDate()) );
+            return dateFormat2;
+        }
+
+        let nowDate = dateFormat(new Date());
+        console.log("현재: " + nowDate);
+
+        let oneMonthAgo = dateFormat(new Date(now1.setMonth(now1.getMonth() - 1)));
+        console.log("한달전: " + oneMonthAgo);
+
+        let threeMonthAgo = dateFormat(new Date(now3.setMonth(now3.getMonth() - 3)));
+        console.log("세달전: " + threeMonthAgo);
+
+        let sixMonthAgo = dateFormat(new Date(now6.setMonth(now6.getMonth() - 6)));
+        console.log("여섯달전: " + sixMonthAgo);
+
+        let oneYearAgo = dateFormat(new Date(now12.setFullYear(now12.getFullYear() - 1)));
+        console.log("일년전: " + oneYearAgo);
+
+        let arr = [];
+        for(let key in conclusion) {
+            arr.push([conclusion[key].createdAt.replace("T00:00:00",""), conclusion[key].price.replaceAll(",","").replace("원","")]);
+        }
+        console.log(arr);
+
+        // 위와 같은 뜻
+        // conclusion.slice().forEach(
+        //     function(c) {
+        //         console.log(c.createdAt + ", "+ c.price);
+        //         labels.push([c.createdAt, c.price]);
+        // });
+        // console.log(labels);
+
+
+        //⚪️ 1개월 그래프 데이터
+        let Date1 = [];
+            let Price1 = [];
+            for(let i in arr){
+                console.log("1개월전 데이터");
+                if(arr[i][0] > oneMonthAgo){
+                    Date1.push(arr[i][0]);
+                    Price1.push(arr[i][1]);
+                }
+        }
+
+        //⚪️ 3개월 그래프 데이터
+        let Date2 = [];
+        let Price2 = [];
+        for(let i in arr){
+            console.log("3개월전 데이터");
+            if(arr[i][0] > threeMonthAgo){
+                Date2.push(arr[i][0]);
+                Price2.push(arr[i][1]);
+            }
+        }
+
+        //⚪️ 6개월 그래프 데이터
+        let Date3 = [];
+        let Price3 = [];
+        for(let i in arr){
+                console.log("6개월전 데이터");
+            if(arr[i][0] > sixMonthAgo){
+                Date3.push(arr[i][0]);
+                Price3.push(arr[i][1]);
+            }
+        }
+
+        //⚪️ 1년 그래프 데이터
+        let Date4 = [];
+        let Price4 = [];
+        for(let i in arr){
+            console.log("1년전 데이터");
+            if(arr[i][0] > oneYearAgo){
+                Date4.push(arr[i][0]);
+                Price4.push(arr[i][1]);
+            }
+        }
+
+        //⚪️ 전체 그래프 데이터
+        let Date5 = [];
+        let Price5 = [];
+        for(let i in arr){
+            console.log("전체 데이터");
+            Date5.push(arr[i][0]);
+            Price5.push(arr[i][1]);
+        }
+
+        // 로드시 전체 그래프 출력
+        let myChart;
+        window.addEventListener('DOMContentLoaded', function() {
+            let ctx = document.getElementById("graphall").getContext("2d");
+            myChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: Date5, // x축
+                    datasets: [{
+                        data: Price5, // y축
+                        backgroundColor: 'rgb(206,39,35)', // 차트 배경 색
+                        borderColor: 'rgb(206,39,35)', // 라인 색
+                        borderWidth: 1, // 라인 넓이
+                        pointRadius: 0 // 포인터 없애기
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    scales: {
+                        xAxes: {
+                            ticks: {
+                                display: false // x축 라벨 숨김
+                            },
+                            grid: {
+                                display: false // x축 눈금선 숨김
+                            }
+                        },
+                        yAxes: {
+                            beginAtZero: true, // y축 0부터 시작
+                            position: 'right', // 축 라벨이 왼쪽에 표시될지, 오른쪽에 표시될지 정함
+                            grid: {
+                                display: false // y축 눈금선 숨김
+                            }
+                        },
+                    },
+                    plugins: {
+                        datalabels: {
+                            display: false
+                        },
+                        legend: {
+                            display: false // 라벨 없애기(그래프제목)
+                        }
+                    },
+                },
+            });
+        });
+
+        // 1개월 그래프
+        let myChart1;
+        const oneMonth = document.getElementById("graph1mm");
+        const sales_panel1 = document.getElementById("sales_panel1");
+        const graph1m = document.getElementById("graph1m");
+        oneMonth.addEventListener("click", () => {
+            graph3m.style.display = "none";
+            graph6m.style.display = "none";
+            graph1y.style.display = "none";
+            graphall.style.display = "none";
+            graph1m.style.display = "block";
+            if (myChart !== undefined) {
+                myChart.destroy();
+                console.log("myChart 삭제");
+            }
+            if (myChart1 !== undefined) {
+                myChart1.destroy();
+                console.log("내꺼 삭제");
+            }
+            check();
+            sales_panel2.classList.remove("show");
+            sales_panel3.classList.remove("show");
+            sales_panel4.classList.remove("show");
+            sales_panel5.classList.remove("show");
+            sales_panel1.classList.add("show");
+            let ctx = document.getElementById("graph1m").getContext("2d");
+            myChart1 = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: Date1, // x축
+                    datasets: [{
+                        data: Price1, // y축
+                        backgroundColor: 'rgb(206,39,35)', // 차트 배경 색
+                        borderColor: 'rgb(206,39,35)', // 라인 색
+                        borderWidth: 1, // 라인 넓이
+                        pointRadius: 0 // 포인터 없애기
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    // tooltips: {
+                    //     callbacks: {
+                    //         label: function(tooltipItem, data) {
+                    //             let label = data.datasets[tooltipItem.datasetIndex].label;
+                    //             label += (tooltipItem.yLabel) + "won";
+                    //             return label;
+                    //         }
+                    //     }
+                    // },
+                    scales: {
+                        xAxes: {
+                            ticks: {
+                                display: false // x축 라벨 숨김
+                            },
+                            grid: {
+                                display: false // x축 눈금선 숨김
+                            }
+                        },
+                        yAxes: {
+                            beginAtZero: true, // y축 0부터 시작
+                            position: 'right', // 축 라벨이 왼쪽에 표시될지, 오른쪽에 표시될지 정함
+                            grid: {
+                                display: false // y축 눈금선 숨김
+                            }
+                        },
+                    },
+                    plugins: {
+                        datalabels: {
+                            display: false
+                        },
+                        legend: {
+                            display: false // 라벨 없애기(그래프제목)
+                        }
+                    },
+                },
+            });
+        });
+
+        // 3개월 그래프
+        let myChart2;
+        const threeMonth = document.getElementById("graph3mm");
+        const sales_panel2 = document.getElementById("sales_panel2");
+        const graph3m = document.getElementById("graph3m");
+        threeMonth.addEventListener("click", () => {
+            graph1m.style.display = "none";
+            graph6m.style.display = "none";
+            graph1y.style.display = "none";
+            graphall.style.display = "none";
+            graph3m.style.display = "block";
+            if (myChart !== undefined) {
+                myChart.destroy();
+                console.log("myChart 삭제");
+            }
+            if (myChart2 !== undefined) {
+                myChart2.destroy();
+                console.log("내꺼 삭제");
+            }
+            check();
+            sales_panel1.classList.remove("show");
+            sales_panel3.classList.remove("show");
+            sales_panel4.classList.remove("show");
+            sales_panel5.classList.remove("show");
+            sales_panel2.classList.add("show");
+            let ctx = document.getElementById("graph3m").getContext("2d");
+            myChart2 = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: Date2, // x축
+                    datasets: [{
+                        data: Price2, // y축
+                        backgroundColor: 'rgb(206,39,35)', // 차트 배경 색
+                        borderColor: 'rgb(206,39,35)', // 라인 색
+                        borderWidth: 1, // 라인 넓이
+                        pointRadius: 0 // 포인터 없애기
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    scales: {
+                        xAxes: {
+                            ticks: {
+                                display: false // x축 라벨 숨김
+                            },
+                            grid: {
+                                display: false // x축 눈금선 숨김
+                            }
+                        },
+                        yAxes: {
+                            beginAtZero: true, // y축 0부터 시작
+                            position: 'right', // 축 라벨이 왼쪽에 표시될지, 오른쪽에 표시될지 정함
+                            grid: {
+                                display: false // y축 눈금선 숨김
+                            }
+                        },
+                    },
+                    plugins: {
+                        datalabels: {
+                            display: false
+                        },
+                        legend: {
+                            display: false // 라벨 없애기(그래프제목)
+                        }
+                    },
+                },
+            });
+        });
+
+        // 6개월 그래프
+        let myChart3;
+        const sixMonth = document.getElementById("graph6mm");
+        const sales_panel3 = document.getElementById("sales_panel3");
+        const graph6m = document.getElementById("graph6m");
+        sixMonth.addEventListener("click", () => {
+            graph1m.style.display = "none";
+            graph3m.style.display = "none";
+            graph1y.style.display = "none";
+            graphall.style.display = "none";
+            graph6m.style.display = "block";
+            if (myChart !== undefined) {
+                myChart.destroy();
+                console.log("myChart 삭제");
+            }
+            if (myChart3 !== undefined) {
+                myChart3.destroy();
+                console.log("내꺼 삭제");
+            }
+            check();
+            sales_panel1.classList.remove("show");
+            sales_panel2.classList.remove("show");
+            sales_panel4.classList.remove("show");
+            sales_panel5.classList.remove("show");
+            sales_panel3.classList.add("show");
+            let ctx = document.getElementById("graph6m").getContext("2d");
+            myChart3 = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: Date3, // x축
+                    datasets: [{
+                        data: Price3, // y축
+                        backgroundColor: 'rgb(206,39,35)', // 차트 배경 색
+                        borderColor: 'rgb(206,39,35)', // 라인 색
+                        borderWidth: 1, // 라인 넓이
+                        pointRadius: 0 // 포인터 없애기
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    scales: {
+                        xAxes: {
+                            ticks: {
+                                display: false // x축 라벨 숨김
+                            },
+                            grid: {
+                                display: false // x축 눈금선 숨김
+                            }
+                        },
+                        yAxes: {
+                            beginAtZero: true, // y축 0부터 시작
+                            position: 'right', // 축 라벨이 왼쪽에 표시될지, 오른쪽에 표시될지 정함
+                            grid: {
+                                display: false // y축 눈금선 숨김
+                            }
+                        },
+                    },
+                    plugins: {
+                        datalabels: {
+                            display: false
+                        },
+                        legend: {
+                            display: false // 라벨 없애기(그래프제목)
+                        }
+                    },
+                },
+            });
+        });
+
+        // 1년 그래프
+        let myChart4;
+        const oneYear = document.getElementById("graph1yy");
+        const sales_panel4 = document.getElementById("sales_panel4");
+        const graph1y = document.getElementById("graph1y");
+        oneYear.addEventListener("click", () => {
+            graph1m.style.display = "none";
+            graph3m.style.display = "none";
+            graph6m.style.display = "none";
+            graphall.style.display = "none";
+            graph1y.style.display = "block";
+            if (myChart !== undefined) {
+                myChart.destroy();
+                console.log("myChart 삭제");
+            }
+            if (myChart4 !== undefined) {
+                myChart4.destroy();
+                console.log("내꺼 삭제");
+            }
+            check();
+            sales_panel1.classList.remove("show");
+            sales_panel2.classList.remove("show");
+            sales_panel3.classList.remove("show");
+            sales_panel5.classList.remove("show");
+            sales_panel4.classList.add("show");
+            let ctx = document.getElementById("graph1y").getContext("2d");
+            myChart4 = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: Date4, // x축
+                    datasets: [{
+                        data: Price4, // y축
+                        backgroundColor: 'rgb(206,39,35)', // 차트 배경 색
+                        borderColor: 'rgb(206,39,35)', // 라인 색
+                        borderWidth: 1, // 라인 넓이
+                        pointRadius: 0 // 포인터 없애기
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    scales: {
+                        xAxes: {
+                            ticks: {
+                                display: false // x축 라벨 숨김
+                            },
+                            grid: {
+                                display: false // x축 눈금선 숨김
+                            }
+                        },
+                        yAxes: {
+                            beginAtZero: true, // y축 0부터 시작
+                            position: 'right', // 축 라벨이 왼쪽에 표시될지, 오른쪽에 표시될지 정함
+                            grid: {
+                                display: false // y축 눈금선 숨김
+                            }
+                        },
+                    },
+                    plugins: {
+                        datalabels: {
+                            display: false
+                        },
+                        legend: {
+                            display: false // 라벨 없애기(그래프제목)
+                        }
+                    },
+                },
+            });
+        });
+
+        // 전체 그래프
+        let myChart5;
+        const allall = document.getElementById("graphallall");
+        const sales_panel5 = document.getElementById("sales_panel5");
+        const graphall = document.getElementById("graphall");
+        allall.addEventListener("click", () => {
+            graph1m.style.display = "none";
+            graph3m.style.display = "none";
+            graph6m.style.display = "none";
+            graph1y.style.display = "none";
+            graphall.style.display = "block";
+            if (myChart !== undefined) {
+                myChart.destroy();
+                console.log("myChart 삭제");
+            }
+            if (myChart5 !== undefined) {
+                myChart5.destroy();
+                console.log("내꺼 삭제");
+            }
+            check();
+            sales_panel1.classList.remove("show");
+            sales_panel2.classList.remove("show");
+            sales_panel3.classList.remove("show");
+            sales_panel4.classList.remove("show");
+            sales_panel5.classList.add("show");
+            let ctx = document.getElementById("graphall").getContext("2d");
+            myChart5 = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: Date5, // x축
+                    datasets: [{
+                        data: Price5, // y축
+                        backgroundColor: 'rgb(206,39,35)', // 차트 배경 색
+                        borderColor: 'rgb(206,39,35)', // 라인 색
+                        borderWidth: 1, // 라인 넓이
+                        pointRadius: 0 // 포인터 없애기
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    scales: {
+                        xAxes: {
+                            ticks: {
+                                display: false // x축 라벨 숨김
+                            },
+                            grid: {
+                                display: false // x축 눈금선 숨김
+                            }
+                        },
+                        yAxes: {
+                            beginAtZero: true, // y축 0부터 시작
+                            position: 'right', // 축 라벨이 왼쪽에 표시될지, 오른쪽에 표시될지 정함
+                            grid: {
+                                display: false // y축 눈금선 숨김
+                            }
+                        },
+                    },
+                    plugins: {
+                        datalabels: {
+                            display: false
+                        },
+                        legend: {
+                            display: false // 라벨 없애기(그래프제목)
+                        }
+                    },
+                },
+            });
+        });
+
+        function check(){
+            if (myChart1 !== undefined) {
+                myChart1.destroy();
+                console.log("myChart1 삭제");
+            }
+            else if (myChart2 !== undefined) {
+                myChart2.destroy();
+                console.log("myChart2 삭제");
+            }
+            else if (myChart3 !== undefined) {
+                myChart3.destroy();
+                console.log("myChart3 삭제");
+            }
+            else if (myChart4 !== undefined) {
+                myChart4.destroy();
+                console.log("myChart4 삭제");
+            }
+            else if (myChart5 !== undefined) {
+                myChart5.destroy();
+                console.log("myChart5 삭제");
+            }
+        }
+        /*]]>*/
+    </script>
+</html>

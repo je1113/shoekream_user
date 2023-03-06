@@ -1,0 +1,208 @@
+.step-3 .btn {
+    display: inline-flex;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    color: rgba(34,34,34,.8);
+    background-color: #fff;
+}
+.container.buy.step-3, .container.sell.step-3{
+    background-color: #fff;
+}
+.step-3 .content{
+    margin: 0 auto;
+    padding: 20px 40px 160px;
+    max-width: 780px;
+}
+.step-3 .buy_complete, step-3 .sell_complete {
+    margin: 0 auto;
+    width: 440px;
+}
+.step-3 .complete_box {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    padding: 32px;
+}
+.step-3 .complete_info {
+    text-align: center;
+}
+.step-3 .complete_desc, .complete_notice {
+    font-size: 13px;
+    color: rgba(34,34,34,.5);
+}
+.step-3 .main_title {
+    line-height: 36px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -.15px;
+}
+.step-3 .sub_title {
+    line-height: 17px;
+    margin-top: 4px;
+    font-size: 14px;
+    letter-spacing: -.21px;
+    color: rgba(34,34,34,.8);
+}
+.step-3 .buy_complete .product, .step-3 .sell_complete .product {
+    border-radius: 10px;
+    padding-top: 0;
+    width: 156px;
+    height: 156px;
+    margin: 20px auto;
+}
+.step-3 .product{
+    overflow: hidden;
+    position: relative;
+    padding-top: 100%;
+    border-radius: 8px;
+}
+.step-3 .buy_complete .product_img, .step-3 .sell_complete .product_img {
+    width: 156px;
+    height: 156px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    border-radius: 10px;
+}
+.step-3 .picture {
+    display: -webkit-box;
+    display: flex;
+}
+.step-3 .product:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+}
+.step-3 .complete_btn_box{
+    margin-top: 21px;
+    font-size: 0;
+    display: -webkit-box;
+    display: flex;
+}
+.step-3 .complete_btn_box .btn {
+    width: 100%;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+.step-3 .outlinegrey{
+    border: 1px solid #d3d3d3;
+    color: rgba(34,34,34,.8);
+}
+.step-3 .medium{
+    padding: 0 18px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 14px;
+    letter-spacing: -.14px;
+}
+.step-3 .complete_btn_box .btn+.btn{
+    margin-left: 8px;
+}
+.step-3 .complete_desc {
+    padding-top: 8px;
+    letter-spacing: -.07px;
+}
+.step-3 .complete_price {
+    margin-top: 52px;
+}
+.step-3 .price_total{
+    padding-top: 0;
+    border-top: 0;
+    padding-bottom: 19px;
+    border-bottom: 2px solid #ebebeb;
+}
+.step-3 .complete_price .order_info .price_box{
+    display: -webkit-box;
+    display: flex;
+}
+.step-3 .price_box {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.step-3 .order_info .price_box .price_title{
+    width: 100%;
+    font-size: 14px;
+}
+.step-3 .price_box .price_title {
+    font-size: 15px;
+    letter-spacing: -.15px;
+    font-weight: 700;
+    letter-spacing: -.01px;
+}
+.step-3 .order_info .price_box .price {
+    width: 100%;
+    text-align: right;
+    display: block;
+}
+.step-3 .price_box .price{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #f15746;
+}
+.step-3 .aos .price_box .amount, .win_os .price_box .amount {
+    font-style: normal;
+}
+.step-3 .price_bind {
+    padding-top: 11px;
+    font-size: 13px;
+    letter-spacing: -.07px;
+}
+.step-3 .price_addition{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 26px;
+    font-size: 13px;
+    letter-spacing: -.07px;
+}
+.step-3 .price_addition.is_dark .price_title {
+    color: #222;
+}
+.step-3 .is_dark .price_text {
+    font-weight: 700;
+}
+.step-3 .price_text {
+    text-align: right;
+    white-space: nowrap;
+    color: #222;
+    font-size: 14px;
+    letter-spacing: -.21px;
+}
+.step-3 .price_text:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.step-3 .price_bind+.price_bind {
+    padding-top: 10px;
+    border-top: 1px solid #ebebeb;
+}
+.step-3 .price_addition{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 26px;
+    font-size: 13px;
+    letter-spacing: -.07px;
+}

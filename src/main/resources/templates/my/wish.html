@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOEKRAEM | 한정판 거래의 FLEX</title>
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico">
+    <link rel="stylesheet" href="/css/my/wish.css">
+    <link rel="stylesheet" href="/css/fragment/footer.css">
+    <style>
+        .menu_item {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body style="">
+    <div id="__nuxt">
+        <div id="__layout">
+            <div tabindex="0" class="wrap etc">
+                <!-- 헤더 시작 -->
+                <header th:replace="/fragment/header.html :: header"></header>
+                <!-- 헤더 끝 -->
+                <!-- 컨텐츠 시작 -->
+                <div class="container my lg">
+                    <div>
+                        <div class="snb_area">
+                            <a href="/my" class="nuxt-link-active">
+                                <h2 class="snb_main_title">마이 페이지</h2>
+                            </a>
+                            <nav class="snb">
+                                <div class="snb_list">
+                                    <strong class="snb_title">쇼핑 정보</strong>
+                                    <ul class="snb_menu">
+                                        <li class="menu_item">
+                                            <a href="/my/buying" class="menu_link">구매 내역</a>
+                                        </li>
+                                        <li class="menu_item">
+                                            <a href="/my/selling" class="menu_link">판매 내역</a>
+                                        </li>
+                                        <li class="menu_item menu_on">
+                                            <a href="/my/wish" class="menu_link nuxt-link-exact-active nuxt-link-active" aria-current="page">관심 상품</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="snb_list">
+                                    <strong class="snb_title">내 정보</strong>
+                                    <ul class="snb_menu">
+                                        <li class="menu_item">
+                                            <a href="/my/profile" class="menu_link">프로필 정보</a>
+                                        </li>
+                                        <li class="menu_item">
+                                            <a href="/my/address" class="menu_link">주소록</a>
+                                        </li>
+                                        <li class="menu_item">
+                                            <a href="/my/payment" class="menu_link">결제 정보</a>
+                                        </li>
+                                        <li class="menu_item">
+                                            <a href="/my/account" class="menu_link">판매 정산 계좌</a>
+                                        </li>
+                                        <li class="menu_item">
+                                            <a href="/my/receipt" class="menu_link">현금영수증 정보</a>
+                                        </li>
+                                        <li class="menu_item">
+                                            <a href="/my/point" class="menu_link">포인트</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="content_area">
+                        <div class="my_interest">
+                            <div class="content_title border">
+                                <div class="title">
+                                    <h3>관심 상품</h3>
+                                </div>
+                            </div>
+                            <ul class="wish_list">
+                                <li class="wish_list_li">
+                                    <div class="wish_item">
+                                        <div class="wish_product">
+                                            <div class="product_box">
+                                                <div class="product" style="background-color: rgb(244, 244, 244);">
+                                                    <a class="wish_pro_img_link">
+                                                        <picture class="picture product_img">
+                                                            <img class="image wish_pro_img" src="" loading="lazy" alt="상품 이미지">
+                                                        </picture>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product_detail">
+                                                <div>
+                                                    <a class="brand-text wish_pro_brand">Asics</a>
+                                                </div>
+                                                <a class="wish_pro_name_size_link">
+                                                    <p class="name wish_pro_name">Asics Gel-Venture 6 SPS Birch French Blue</p>
+                                                    <span class="size wish_pro_size">245</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="wish_buy">
+                                            <div>
+                                                <div class="division_btn_box lg">
+                                                    <a class="btn_division buy">
+                                                        <strong class="title">구매</strong>
+                                                        <div class="price">
+                                                            <span class="amount">
+                                                                <em class="num wish_pro_buy">93,000</em>
+                                                                <span class="won">원</span>
+                                                            </span>
+                                                            <span class="desc">즉시 구매가</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                    <a class="status_link wish_proIdx" id="wishProductIdx" th:onclick="Delete(this.getAttribute('value'))">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 페이지네이션 시작 -->
+<!--                            <div class="pagination">-->
+<!--                                <div class="pagination_box first">-->
+<!--                                    <div class="prev_btn_box">-->
+<!--                                        <a href="#" class="btn_arr" aria-label="첫 페이지"><img src="/img/left.png"></a>-->
+<!--                                        <a href="#" class="btn_arr" aria-label="이전 페이지"></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="page_bind">-->
+<!--                                        <a href="#" class="btn_page active" aria-label="1페이지"> 1 </a>-->
+<!--                                        <a href="#" class="btn_page" aria-label="2페이지"> 2 </a>-->
+<!--                                        <a href="#" class="btn_page" aria-label="3페이지"> 3 </a>-->
+<!--                                        <a href="#" class="btn_page" aria-label="4페이지"> 4 </a>-->
+<!--                                        <a href="#" class="btn_page" aria-label="5페이지"> 5 </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="next_btn_box">-->
+<!--                                        <a href="#" class="btn_arr" aria-label="다음 페이지">-->
+<!--                                        </a><a href="#" class="btn_arr" aria-label="마지막 페이지">-->
+<!--                                            <img src="/img/right.png">-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"></div></div>
+                                <div class="col-sm-12 col-md-7">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                                        <ul class="pagination">
+                                            <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">
+                                                    <i class="ion-chevron-left"></i>
+                                                </a>
+                                            </li>
+                                            <li class="paginate_button page-item active">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                            </li>
+                                            <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">
+                                                    <i class="ion-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 페이지네이션 끝 -->
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <!-- 푸터 시작 -->
+                <footer th:replace="/fragment/footer.html :: footer"></footer>
+                <!-- 푸터 끝 -->
+                <!---->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/my/wish.js"></script>
+<!--<script>-->
+<!--    history.replaceState({}, null, location.pathname);-->
+<!--</script>-->
+</html>

@@ -1,0 +1,257 @@
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+div {
+    display: block;
+}
+body, button, input, select, table, textarea {
+    color: #222;
+}
+body, button, dd, div, dl, dt, fieldset, figcaption, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+a, a:active, a:focus, a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.title>h3{
+    margin:0;
+}
+.container.my {
+    margin: 0 auto;
+    padding: 40px 40px 160px;
+    max-width: 1280px;
+}
+.container.my .content_area {
+    overflow: hidden;
+    min-height: 380px;
+}
+.content_title.has_sub {
+    padding-bottom: 22px;
+}
+.content_title.border {
+    border-bottom: 3px solid #222;
+}
+.content_title {
+    display: flex;
+    padding: 5px 0 6px;
+}
+.title {
+    font-size: 24px;
+    letter-spacing: -.36px;
+}
+.title>h3 {
+    line-height: 29px;
+    font-size: inherit;
+}
+.sub_title {
+    font-size: 12px;
+    letter-spacing: -.005em;
+    color: rgba(34,34,34,.5);
+}
+.content_title.has_sub .btn_box {
+    padding-top: 4px;
+}
+.btn_box .btn, .btn_box {
+    display: flex;
+}
+.btn_box {
+    margin-left: auto;
+    padding-left: 30px;
+    flex-shrink: 0;
+}
+.btn_box .btn.btn_add {
+    margin-right: 0;
+    padding: 0 14px;
+    height: 34px;
+    line-height: 32px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    font-size: 12px;
+    letter-spacing: -.06px;
+}
+.btn {
+    display: inline-flex;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    color: rgba(34,34,34,.8);
+    background-color: #fff;
+}
+.empty_area .desc {
+    font-size: 13px;
+    letter-spacing: -.07px;
+    color: rgba(34,34,34,.5);
+}
+.my .empty_area {
+    padding: 80px 0;
+}
+.empty_area.has_bg {
+    background-color: #fafafa;
+}
+.empty_area {
+    padding: 81px 0 45px;
+    text-align: center;
+}
+.my_payment .empty_area {
+    padding: 160px 0!important;
+}
+.my_payment .my_list .basic {
+    padding: 22px 0 29px;
+}
+.basic {
+    padding: 30px 0 29px;
+    border-bottom: 2px solid #222;
+}
+.my_item {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.my_item .info_bind {
+    margin-right: 24px;
+}
+.my_payment .basic .card_info {
+    padding: 13px 0 1px;
+}
+.card_info {
+    padding: 16px 50px 17px 21px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.my_list .card_name, .other_card .card_name {
+    display: inline-block;
+    padding: 9px;
+    min-width: 52px;
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    text-align: center;
+}
+.card_name {
+    font-size: 15px;
+    letter-spacing: -.15px;
+}
+.card_num {
+    margin-left: 17px;
+    font-size: 14px;
+}
+.card_num .num_bind {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.my_list .mark {
+    margin-top: 7px;
+}
+.mark {
+    padding: 0 6px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #bbb;
+    vertical-align: top;
+}
+.my_payment .basic .btn_bind {
+    margin-top: 30px;
+}
+.btn_bind {
+    margin-left: auto;
+}
+.btn_bind .btn {
+    padding-left: 11px;
+    padding-right: 12px;
+}
+.outlinegrey {
+    border: 1px solid #d3d3d3;
+    color: rgba(34,34,34,.8);
+}
+.small, .xsmall {
+    font-size: 12px;
+    letter-spacing: -.06px;
+}
+.small {
+    padding: 0 14px;
+    height: 34px;
+    border-radius: 10px;
+}
+.btn {
+    display: inline-flex;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #fff;
+}
+.other .my_item {
+    padding: 17px 0 16px;
+    border-bottom: 1px solid #ebebeb;
+}
+.my_item {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.my_payment .other .card_info {
+    padding: 4px 0;
+}
+.card_num .dot {
+    white-space: nowrap;
+}
+.card_num .dot:after, .card_num .dot:before {
+    content: "";
+    margin-left: 2px;
+    display: inline-flex;
+    width: 5px;
+    height: 5px;
+    background-color: #222;
+    border-radius: 100%;
+}
+.btn_bind .btn+.btn {
+    margin-left: 8px;
+}
+.card_num .num_bind {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

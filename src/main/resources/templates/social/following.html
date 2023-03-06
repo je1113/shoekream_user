@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STYLE | SHEOKREAM</title>
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--axios cdn -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="/css/social/following.css">
+    <link rel="stylesheet" href="/css/fragment/footer.css">
+
+
+
+</head>
+
+
+<body>
+<div id="__nuxt">
+    <div id="__layout">
+        <div tabindex="0" class="wrap win_os lg">
+            <div>
+                <!-- 헤더 시작 -->
+                <header th:replace="/fragment/header :: header"></header>
+                <div class="social_header">
+                    <div class="style_tab_list">
+                        <a href="/social" class="tab_item"> 인기 </a>
+                        <a href="/social/newest" class="tab_item"> 최신 </a>
+                        <a href="/social/following" class="tab_item tab_on"> 팔로잉 </a>
+                        <a href="/social/myprofile" class="tab_item"> 내스타일 </a>
+                    </div>
+                </div>
+                <!-- 헤더 끝 -->
+            </div>
+            <div social class="container social lg">
+                <div class="content">
+                    <div class="feed">
+<!--                         피드 개수 넣어주기-->
+                        <input type="hidden" value="" id="feed_cnt">
+                        <!--                            게시글 하나 시작-->
+                        <div id="p650880" class="social_post_detail">
+                            <div class="social_user_state">
+                                <a  class="user_state_box"
+                                ><div class="profile_img_box" >
+                                    <img src="" alt="KREAM 프로필 이미지" class="profile_img" >
+                                </div>
+                                    <div class="profile_info" >
+                                        <p class="user_name" >sungmongmong</p>
+                                        <p class="upload_time" ><time>2022년 12월 14일</time></p>
+                                    </div>
+                                    <!---->
+                                </a>
+                            </div>
+                            <div class="social_image_box">
+                                <div class="social_slide">
+                                    <div class="slick-slider slick-initialized">
+                                        <div  class="slick-list">
+                                            <div class="slick-track" style="width: 720px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                                <div  tabindex="-1" data-index="0" aria-hidden="false" class="slick-slide slick-active slick-current" style="outline: none; width: 720px;">
+                                                    <div>
+                                                        <div tabindex="-1" class="slide_content" style="width: 100%; display: inline-block;">
+                                                            <div class="slide_item">
+                                                                <div class="img_box">
+                                                                    <img oncontextmenu="return false" ondragstart="return false" onselectstart="return false" src="https://kream-phinf.pstatic.net/MjAyMjEyMTRfMTU4/MDAxNjcwOTQ5MzI5MDI2.wjJZ9BinAirPGmY3tMs4nx1SVPUFi-o9IpCoSue-0_Eg.w7nYPAruJq8wZO9-t2RBdSKtoSpD9F42_P7tPx6iLkkg.JPEG/p_c0e9c498534348b9be51b7a559a5ef81.jpeg?type=l" alt="소셜이미지" class="social_img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="social_product">
+                                <div class="product_num_container">
+                                    <div class="product_title">
+                                            <span class="title_txt">
+                                                상품 태그
+                                                <strong class="num">3</strong>
+                                                개
+                                            </span>
+                                        <!---->
+                                    </div>
+                                </div>
+                                <div class="product_list_area single_list" >
+                                    <ul class="product_list" style="transform:translateX(0px);" >
+                                        <li class="product_item" >
+                                            <a class="product_link" >
+                                                <div class="product" style="background-color:#f4f4f4;">
+                                                    <picture class="picture product_img">
+                                                        <source type="image/webp" srcset="" >
+                                                        <source srcset="" >
+                                                        <img alt="Essentials The Core Collection Hoodie Dark Oatmeal" src="" loading="auto" class="image" >
+                                                    </picture>
+                                                </div>
+                                                <div class="product_desc">
+                                                    <p class="product_name">Essentials The Core Collection Hoodie Dark Oatmeal</p>
+                                                    <div class="price_box">
+                                                        <span class="amount" >180,000</span>
+                                                        <span class="unit">원</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="social_contents">
+                                <div class="social_btn">
+                                    <div class="btn_bind">
+                                        <a aria-label="좋아요" class="btn like" id="button_like">
+                                            <img  src="/img/styleImg/like_icon.png" class="icon sprite-icons social-like like_class">
+<!--                                            <img  id="like_icon" src="/img/styleImg/like_icon.png" class="icon sprite-icons social-like like_class">-->
+                                        </a>
+                                        <a style="cursor: pointer;" aria-label="댓글" class="btn comment" id="comment_img" onclick="comment_more()">
+                                            <img src="/img/styleImg/comment_icon.png" class="social-comment icon sprite-icons">
+                                        </a>
+                                    </div>
+<!--                                    <a href="#" aria-label="공유" class="btn share">-->
+<!--                                        <img src="../../img/share.png" onclick="pop_like()" class="social-share icon sprite-icons" >-->
+<!--                                        <img src="../../img/share.png" onclick="pop_like()" class="social-share icon sprite-icons" >-->
+<!--                                    </a>-->
+                                </div>
+                                <div class="social_count">
+                                    <!---->
+                                    <a class="like_count"> 공감 <strong id="like_cnt">72</strong>개 </a>
+                                    <!---->
+                                    <!---->
+                                </div>
+                                <div class="social_text">
+                                        <span class="text_link" >
+                                            <span class="text">뿡
+                                                <!--                                            <a class="hashtag" href="https://kream.co.kr/social/tags/미리메리챌린지">#미리메리챌린지</a>-->
+                                            </span>
+                                                <a class="hashtag"><p>#미리메리챌린지</p></a>
+                                            <!---->
+                                        </span>
+                                    <!---->
+                                </div>
+                                <div class="social_comment">
+                                    <div class="comment_area" >
+                                        <a class="comment_count" > 댓글 <strong >4</strong>개 </a>
+                                        <div class="comment_list" >
+                                            <div class="comment_unit">
+                                                <div class="comment_box" >
+                                                    <a class="profile_link" >
+                                                        <img src="/img/kream_empty_img.png" alt="KREAM 프로필 이미지" class="profile_img" >
+                                                    </a>
+                                                    <div class="comment_detail" >
+                                                        <div class="main">
+                                                            <span class="user_name" >svn3g8</span>
+                                                            <span class="comment_txt" >스택.사이즈  궁금합니닷!!</span>
+                                                        </div>
+                                                        <div class="sub" >
+                                                            <span class="upload_time" ><time>2022년 12월 14일</time></span>
+                                                            <!---->
+                                                            <!---->
+                                                            <!---->
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                    <!--                                                        <a href="#" class="btn_like" >-->
+                                                    <!--                                                            <img src="../../static/lib/styleImg/like_icon.png" class="icon sprite-icons social-like-gray-sm">-->
+                                                    <!--                                                        </a>-->
+                                                </div>
+                                            </div>
+
+                                            <a style="cursor: pointer;" class="btn_more"  onclick="comment_more()">댓글 더 보기...</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--                                    댓글 더보기 시작-->
+                                <div style="display: none;" id="comment_more" class="layer_social_comment layer lg">
+                                    <div class="layer_container" id="reload_div">
+                                        <a class="btn_layer_close">
+                                            <img id="comment_close" src="/img/x.png" class="ico-close icon sprite-icons" onclick="comment_close()">
+                                        </a>
+                                        <div  class="layer_header">
+                                            <h2 class="title">댓글</h2>
+                                        </div>
+                                        <div class="layer_content">
+                                            <div class="comment_top">
+                                                <div class="comment_top_scroll">
+                                                    <div class="comment_unit" >
+                                                        <div class="comment_box">
+                                                            <a class="profile_link" id="content_profile">
+                                                                <img  src=""
+                                                                      alt="KREAM 프로필 이미지" class="profile_img" id="layer_board_member_profile">
+                                                            </a>
+                                                            <div  class="comment_detail">
+                                                                <div class="main">
+                                                                    <span class="user_name" id="layer_board_nickname">mangocheezz</span>
+                                                                    <span class="comment_txt" id="layer_board_content">북금곰<br>
+                                                                            <a><span class="hashtag" id="layer_board_hashtag">#미리메리챌린지</span></a>
+                                                                        </span>
+                                                                </div>
+                                                                <div  class="sub">
+                                                                    <span  class="upload_time" id="layer_board_time">2022년 12월 17일</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="reply_insert">
+                                                <div class="social_comment_input_box">
+                                                    <!---->
+                                                    <div class="social_comment_input">
+                                                        <div  class="comment_input">
+                                                            <a class="profile_link">
+                                                                <img  src="" alt="KREAM 프로필 이미지" class="profile_img" id="layer_commment_create_profile">
+                                                            </a>
+                                                            <div class="wrap_input" style="height: 41px;">
+                                                                <div placeholder="댓글을 남기세요…"contenteditable="true"
+                                                                     oninput="inputReply(this)" onkeyup="isNull(this)" class="input_txt origin" id="layer_reply_content"></div>
+                                                                <!--                                                                    <div  placeholder="댓글을 남기세요…" class="input_txt dummy"></div>-->
+                                                                <a class="btn_regist" style="display: none;" id="reply_submit_btn" onclick="comment_submit()"> 등록 </a>
+                                                                <input type="hidden" id="now_boardIdx">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="social_suggests" style="display: none;">
+
+                                                        </ul>
+                                                    </div>
+                                                </div></div><div class="comment_content">
+                                            <div class="comment_group" id="comment_group">
+                                                <div class="comment_unit" >
+                                                    <div class="comment_box">
+                                                        <a class="profile_link">
+                                                            <img  src="" alt="KREAM 프로필 이미지" class="profile_img layer_unit">
+                                                        </a>
+                                                        <div class="comment_detail">
+                                                            <div  class="main">
+                                                                <span  class="user_name">1week7outfits</span>
+                                                                <span  class="comment_txt">너무 멋져요 💘</span>
+                                                            </div>
+                                                            <div class="sub">
+                                                                <span class="upload_time">2022년 12월 19일</span>
+                                                                <a class="delete" id="layer_comment_delete" style="display: none">삭제</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--                                    댓글 더보기 끝-->
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <!--                            게시글 하나 끝-->
+                        <!--            비었을 때 -->
+                        <div   class="social_feeds_empty">
+                            <div class="empty_box" style="margin: 90px auto 200px;
+                                                          max-width: 275px;
+                                                          text-align: center;">
+                                <img src="/img/styleImg/empty_following.png" style="width: 90px;
+                                                                                    margin-bottom: 10px;
+                                                                                    padding-top: 150px;">
+                                <strong class="empty_title" style="padding-top: 5px;
+                                                                   display: block;
+                                                                   font-size: 15px;
+                                                                   letter-spacing: -.15px;">팔로잉</strong>
+                                <p class="empty_txt" style="padding-top: 11px;
+                                                            font-size: 13px;
+                                                            letter-spacing: -.07px;
+                                                            /*color: rgba(34,34,34,.5);*/
+                                                            word-break: keep-all;
+                                        margin-bottom: 10px">팔로우한 사용자가 없거나 사용자들의 게시글이 없습니다.</p>
+                                <a href="/social" type="button" class="btn outline small" style="border: 1px solid #d3d3d3;
+                                                                                                    margin-top: 16px;padding: 5px;
+                                                                                                    font-weight: 600;color: gray;"> 인기글 보기 </a>
+                            </div>
+                        </div>
+                        <!--             비었을 때 끝-->
+                    </div>
+
+                    <!--                    위아래 버튼 시작 -->
+                    <button class="btn_top lg updown">
+                        <img class="ico-top icon sprite-icons" src="/img/main/top.png">
+                    </button>
+                    <button class="btn_bottom lg updown">
+                        <img class="ico-bottom icon sprite-icons" src="/img/main/bottom.png">
+                    </button>
+                    <!--                    위아래 버튼 끝 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    마음 누른 사람 팝업창 시작-->
+<div id="like_users" class="layer_social_user_list layer lg" style="display: none">
+    <div class="layer_container">
+        <a class="btn_layer_close" onclick="like_users_pop_down()">
+            <img src="/img/x.png" class="ico-close icon sprite-icons">
+        </a>
+        <div class="layer_header">
+            <h2 class="title">
+                공감
+                <span class="cnt" id="layer_like_cnt">237</span>
+            </h2>
+        </div>
+        <div class="layer_content">
+            <!---->
+            <div class="user_list_content">
+                <ul class="user_list" id="layer_like_user_list">
+                    <li class="user_item">
+                        <div class="user_box">
+                            <a class="user_link">
+                                <div class="img_box">
+                                    <img src="/img/styleImg/empty_profile_img.png"
+                                         alt="KREAM 프로필 이미지" class="profile_img">
+                                </div>
+                                <div class="info_box">
+                                                        <span class="user_name">
+                                                            <span class="user_name_text">cdmlwe</span>
+                                                        </span>
+                                    <span class="user_subname">yangrara</span>
+                                </div>
+                            </a>
+                            <div class="user_box_follow">
+                                <button type="button" class="btn solid small btn_follow small"> 팔로우
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!---->
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<!--    마음 누른 사람 팝업창 끝-->
+
+<!--    <link rel="stylesheet" href="../../static/lib/css/hashtag.css">-->
+<!-- 푸터 시작 -->
+<div class="footer">
+    <footer th:replace="/fragment/footer :: footer"></footer>
+</div>
+<!-- 푸터 끝 -->
+
+<script src="/js/social/comment_layer.js"></script>
+<script src="/js/social/like.js"></script>
+<script src="/js/social/like_users.js"/>
+    <link rel="stylesheet" href="/css/social/following.css">
+
+</body>
+
+
+</html>
+<script>
+    window.onload = function(){
+        const items = document.querySelectorAll('gnb_item');
+        items.forEach((it) => {
+            it.classList.remove('gnb_on');
+        })
+        const item = document.getElementById('st_gnb');
+        item.classList.add('gnb_on');
+    }
+
+</script>
+
+

@@ -1,0 +1,70 @@
+shoekream/src/main/resources/application.yml
+shoekream/src/main/resources/application-oauth.yaml
+shoekream/src/main/resources/data.sql
+shoekream/src/main/resources/conclusion.sql
+
+# Spring Boot 설정 파일
+application.properties
+application.yml
+bootstrap.properties
+bootstrap.yml
+
+# 빌드 결과물
+build/
+target/
+
+
+HELP.md
+.gradle
+build/
+.mvn/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# 로그 파일
+*.log
+
+# 암호화된 파일
+*.jks
+*.key
+*.key-store
+*.p12
+
+# 배포 설정 파일
+ebextensions/
+
+# OS generated files
+.DS_Store
+Thumbs.db

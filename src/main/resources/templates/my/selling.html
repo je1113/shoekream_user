@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOEKREAM | 한정판 거래의 FLEX</title>
+    <link rel="stylesheet" href="/css/my/buying.css">
+    <link rel="stylesheet" href="/css/fragment/footer.css">
+    <link rel="stylesheet" href="/css/fragment/mypage_navbar.css">
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico">
+    <script defer src="/js/fragment/mypage_navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <div id="__nuxt">
+            <!---->
+            <div id="__layout">
+                <div class="wrap win_os">
+                    <!---->
+                    <div class="wrap_inner">
+                        <!-- header_title start -->
+                        <div th:replace="fragment/header :: header"></div>
+                        <!--header_title end-->
+                        <!--container-->
+                        <div class="container my lg">
+                            <div>
+                                <!--snb_area start-->
+                                <nav th:replace="/fragment/mypage_navbar::nav"></nav>
+                                <!--snb_area end-->
+                            </div>
+                            <div class="container my lg">
+                                <div class="content_area">
+                                    <div class="my_purchase">
+                                        <div class="content_title">
+                                            <div class="title">
+                                                <h3>판매 내역</h3>
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                        </div>
+                                        <div class="purchase_list_tab detail_tab">
+                                            <div class="tab_item total">
+                                                <a href="#" class="tab_link">
+                                                    <dl class="tab_box">
+                                                        <dt class="title">전체</dt>
+                                                        <dd class="count">0</dd>
+                                                    </dl>
+                                                </a>
+                                            </div>
+                                            <div class="tab_item buy active" id="sell_tab_item">
+                                                <a class="tab_link">
+                                                    <dl class="tab_box">
+                                                        <dt class="title">판매입찰</dt>
+                                                        <dd class="count" id="bindCount">0</dd>
+                                                    </dl>
+                                                </a>
+                                            </div>
+                                            <div class="tab_item inProgress">
+                                                <a class="tab_link">
+                                                    <dl class="tab_box">
+                                                        <dt class="title">진행중</dt>
+                                                        <dd class="count" id="continueCount">0</dd>
+                                                        <!---->
+                                                    </dl>
+                                                </a>
+                                            </div>
+                                            <div class="tab_item end">
+                                                <a class="tab_link">
+                                                    <dl class="tab_box">
+                                                        <dt class="title">종료</dt>
+                                                        <dd class="count" id="endCount">0</dd>
+                                                    </dl>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="period_search">
+                                            <div class="period_month">
+                                                <ul class="month_list">
+                                                    <li class="month_item "><a class="month_link" href="/my/selling?month=2">최근 2개월</a></li>
+                                                    <li class="month_item"><a class="month_link" href="/my/selling?month=4">4개월</a></li>
+                                                    <li class="month_item"><a class="month_link" href="/my/selling?month=6">6개월</a></li>
+                                                    <li class="month_item hide_item"><a class="month_link">기간조회</a></li>
+                                                </ul>
+                                            </div>
+<!--                                            <div class="period_calendar_wrapper">-->
+<!--                                                <div class="period_calendar">-->
+<!--                                                    <div class="calendar_wrap">-->
+<!--                                                        <span>-->
+<!--                                                            <div class="calendar">-->
+<!--                                                                <input type="date" class="cal_input" value="2021-08-08" name="date1" id="datepicker1" readonly>-->
+<!--                                                                <span class="cal_btn"></span>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="vc-popover-content-wrapper">-->
+<!--                                                                &lt;!&ndash;&ndash;&gt;-->
+<!--                                                            </div>-->
+<!--                                                        </span>-->
+<!--                                                    </div>-->
+<!--                                                    <span class="swung_dash">~</span>-->
+<!--                                                    <div class="calendar_wrap">-->
+<!--                                                        <span>-->
+<!--                                                            <div class="calendar">-->
+<!--                                                                <input type="date" class="cal_input" value="2021-09-08" name="date2" id="datepicker2" readonly>-->
+<!--                                                                <span class="cal_btn"></span>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="vc-popover-content-wrapper is-interactive" style="margin: 0px;">-->
+<!--                                                                &lt;!&ndash;&ndash;&gt;-->
+<!--                                                            </div>-->
+<!--                                                        </span>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="period_btn_box">-->
+<!--                                                    <button class="btn_search" onclick="bindAxios()"> 조회 </button>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+                                        </div>
+                                        <ul class="search_info">
+                                            <li class="info_item">
+                                                <p>한 번에 조회 가능한 기간은 최대 6개월입니다.</p>
+                                            </li>
+                                            <li class="info_item">
+                                                <p>기간별 조회 결과는 입찰일 기준으로 노출됩니다.</p>
+                                            </li>
+                                        </ul>
+                                        <div id="purchase_list">
+                                            <!-- purchase_list -->
+                                            <div class="purchase_list finished bid">
+                                                <div class="purchase_head">
+<!--                                                    <div class="head_product">-->
+<!--                                                        <a href="#" class="btn_filter">-->
+<!--                                                            <span>전체</span>-->
+<!--                                                            <img src="/img/select_icon.png" class="ico-arr-dir-down-circle icon sprite-icons"></img>-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+                                                    <div class="head_status">
+                                                        <div class="status_box field_price" id="wish_price">
+                                                            <a class="status_link" id="wish_price_arrow">
+                                                                <span class="status_txt">판매 희망가</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="status_box field_date_purchased" style="display: none">
+                                                            <a class="status_link">
+                                                                <span class="status_txt">판매일</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="status_box field_date_paid" style="display: none">
+                                                            <a class="status_link">
+                                                                <span class="status_txt">판매 가격</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="status_box field_expires_at" id="purchase_date">
+                                                            <a class="status_link" id="purchase_date_arrow">
+                                                                <span class="status_txt">판매일</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="status_box field_status" style="display: none">
+                                                            <a class="status_link">
+                                                                <span class="status_txt">상태</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--상품 리스트-->
+                                                <div>
+                                                    <div id="bidding">
+                                                        <div class="purchase_list_display_item"
+                                                             style="background-color: rgb(255, 255, 255);">
+                                                            <div class="purchase_list_product" onclick="location.href='#'">
+                                                                <div class="list_item_img_wrap">
+                                                                    <img
+                                                                            alt="product_image"
+                                                                            src="/img/nav_close_icon.png"
+                                                                            class="list_item_img"
+                                                                            style="background-color: rgb(244, 244, 244);"><!---->
+                                                                </div>
+                                                                <div class="list_item_title_wrap"><!---->
+                                                                    <p class="list_item_title">Snow Peak BBQ
+                                                                        Pitts</p>
+                                                                    <p class="list_item_description">ONE SIZE
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="list_item_status">
+                                                                <div
+                                                                        class="list_item_column column_secondary">
+                                                                    <p class="secondary_title display_paragraph">50,000원</p>
+                                                                </div>
+                                                                <div class="list_item_column column_last">
+                                                                    <p class="last_title display_paragraph"><time>기한만료</time></p>
+                                                                    <p class="last_description display_paragraph"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div><!---->
+                                                    </div>
+                                                    <div id="progressing" style="display: none">
+                                                        <div class="purchase_list_display_item"
+                                                             style="background-color: rgb(255, 255, 255);">
+                                                            <div class="purchase_list_product">
+                                                                <div class="list_item_img_wrap">
+                                                                    <img
+                                                                            alt="product_image"
+                                                                            src="/img/nav_close_icon.png"
+                                                                            class="list_item_img"
+                                                                            style="background-color: rgb(244, 244, 244);"><!---->
+                                                                </div>
+                                                                <div class="list_item_title_wrap"><!---->
+                                                                    <p class="list_item_title">Snow Peak BBQ
+                                                                        Pitts</p>
+                                                                    <p class="list_item_description">ONE SIZE
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="list_item_status">
+                                                                <div class="list_item_column column_last">
+                                                                    <p class="last_title display_paragraph">발송요청</p>
+                                                                    <p class="last_description display_paragraph"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div><!---->
+                                                    </div>
+                                                    <div id="ends"  style="display: none">
+                                                        <div class="purchase_list_display_item"
+                                                             style="background-color: rgb(255, 255, 255);">
+                                                            <div class="purchase_list_product">
+                                                                <div class="list_item_img_wrap">
+                                                                    <img
+                                                                            alt="product_image"
+                                                                            src="/img/nav_close_icon.png"
+                                                                            class="list_item_img"
+                                                                            style="background-color: rgb(244, 244, 244);"><!---->
+                                                                </div>
+                                                                <div class="list_item_title_wrap"><!---->
+                                                                    <p class="list_item_title">Snow Peak BBQ
+                                                                        Pitts</p>
+                                                                    <p class="list_item_description">ONE SIZE
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="list_item_status">
+                                                                <div class="list_item_column column_last">
+                                                                    <p class="last_title display_paragraph">정산완료</p>
+                                                                    <p class="last_description display_paragraph"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div><!---->
+                                                    </div>
+                                                </div>
+
+                                                <!--상태 팝업 1 입찰중-->
+<!--                                                <div class="layer lg" style="display: none;" id="status1">-->
+<!--                                                    <div class="layer_container">-->
+<!--                                                        <div class="layer_header">-->
+<!--                                                            <h2 class="title">선택한 상태 보기</h2>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="layer_content">-->
+<!--                                                            <div class="select_status">-->
+<!--                                                                <ul class="status_list">-->
+<!--                                                                    <li class="status_item item_on"><a class="status_link">전체</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">입찰중</a></li>-->
+<!--                                                                    <li class="status_item status_danger"><a class="status_link">기한만료</a></li>-->
+<!--                                                                </ul>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <a class="btn_layer_close">-->
+<!--                                                            <img src="/img/nav_close_icon.png" class="ico-close icon sprite-icons">-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                                <!--상태 팝업 2 진행중-->
+<!--                                                <div class="layer lg" style="display: none;" id="status2">-->
+<!--                                                    <div class="layer_container">-->
+<!--                                                        <div class="layer_header">-->
+<!--                                                            <h2 class="title">선택한 상태 보기</h2>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="layer_content">-->
+<!--                                                            <div class="select_status">-->
+<!--                                                                <ul class="status_list">-->
+<!--                                                                    <li class="status_item item_on"><a class="status_link">전체</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">대기중</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">발송완료</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">입고대기</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">입고완료</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">검수중</a></li>-->
+<!--                                                                    <li class="status_item status_warning"><a class="status_link">검수보류</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">검수합격</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">배송중</a></li>-->
+<!--                                                                    <li class="status_item status_danger"><a class="status_link">거래실패</a></li>-->
+<!--                                                                </ul>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <a class="btn_layer_close">-->
+<!--                                                            <img src="/img/nav_close_icon.png" class="ico-close icon sprite-icons">-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                                <!--상태 팝업 3 종료-->
+<!--                                                <div class="layer lg" style="display: none;" id="status3">-->
+<!--                                                    <div class="layer_container">-->
+<!--                                                        <div class="layer_header">-->
+<!--                                                            <h2 class="title">선택한 상태 보기</h2>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="layer_content">-->
+<!--                                                            <div class="select_status">-->
+<!--                                                                <ul class="status_list">-->
+<!--                                                                    <li class="status_item item_on"><a class="status_link">전체</a></li>-->
+<!--                                                                    <li class="status_item"><a class="status_link">배송완료</a></li>-->
+<!--                                                                    <li class="status_item status_danger"><a class="status_link">취소완료</a></li>-->
+<!--                                                                </ul>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <a class="btn_layer_close">-->
+<!--                                                            <img src="/img/nav_close_icon.png" class="ico-close icon sprite-icons">-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                                <!----><!----><!----><!---->
+                                            </div>
+                                        </div>
+                                        <div class="pagination">
+                                            <div class="pagination_box first last">
+                                                <div class="prev_btn_box">
+                                                    <a class="btn_arr">
+                                                    </a>
+                                                    <a class="btn_arr">
+                                                    </a>
+                                                </div>
+                                                <div class="page_bind">
+                                                    <a class="btn_page active"> 1 </a>
+                                                </div>
+                                                <div class="next_btn_box">
+                                                    <a class="btn_arr">
+                                                    </a>
+                                                    <a class="btn_arr">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!---->
+            </div>
+        </div>
+    </div>
+<!--footer-->
+<div th:replace="fragment/footer :: footer"></div>
+<!--footer end--><!----><!----><!---->
+</body>
+<script src="/js/my/selling.js"></script>
+</html>

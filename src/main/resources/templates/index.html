@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOEKREAM | 한정판 거래의 FLEX</title>
+    <link rel="stylesheet" href="../css/main/mainpage1.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Slick 불러오기 -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/main/slick.min.js"></script>
+
+    <link rel="stylesheet" href="../css/layer/layer.css">
+    <link rel="stylesheet" href="../css/layer/layer_auth_policy.css">
+    <link rel="stylesheet" href="../css/layer/layer_faq.css">
+    <link rel="stylesheet" href="../css/main/slick.css" />
+    <link rel="stylesheet" href="../css/main/slick-theme.css" />
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico">
+
+    <script src="https://kit.fontawesome.com/c6de1e900d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="__nuxt"><!---->
+        <div id="__layout">
+            <div tabindex="0" class="wrap is_scroll win_os lg"><!---->
+                <div>
+                    <header th:replace="/fragment/header :: header"></header>
+                </div>
+
+
+                <div class="container">
+                    <div class="home lg">
+                        <div class="download_banner lg" style="display: none;">
+                            <div class="banner_box">
+                                <div class="thumb"><svg xmlns="http://www.w3.org/2000/svg"
+                                        class="logo-app icon sprite-icons">
+                                        <use href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-logo-app"
+                                            xlink:href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-logo-app"></use>
+                                    </svg></div>
+                                <div class="banner_info">
+                                    <p class="banner_title"> 한정판 거래 플랫폼, KREAM<br>앱 설치 후 사용해보세요 <a href="#"
+                                            class="btn_appdown">앱 다운로드</a></p>
+                                </div><a href="#" aria-label="닫기" class="btn_close"><svg
+                                        xmlns="http://www.w3.org/2000/svg" class="ico-nav-close icon sprite-icons">
+                                        <use href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-nav-close"
+                                            xlink:href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-nav-close">
+                                        </use>
+                                    </svg></a>
+                            </div>
+                        </div>  
+                        <div>
+                            <div id="slider-div">
+                                <div class="main_banner" style="width: 100%;"><img class="bannerImg"
+                                        src="../img/main/1.jpg"></div>
+                                <div class="main_banner" style="width: 100%;"><img class="bannerImg"
+                                        src="../img/main/2.jpg"></div>
+                                <div class="main_banner" style="width: 100%; cursor:pointer;" onClick="location.href='http://localhost:8889/brand/Lego'"><img class="bannerImg"
+                                        src="../img/main/3.jpg"></div>
+                                <div class="main_banner" style="width: 100%; cursor:pointer;" onClick="location.href='http://localhost:8889/searchs?page=0&sort=wishCount,desc&psize=&brand=&category=%ED%8C%A8%EC%85%98%EC%9E%A1%ED%99%94&collection=&gender=&keyword='"><img class="bannerImg"
+                                        src="../img/main/4.jpg"></div>
+                                <div class="main_banner" style="width: 100%; cursor:pointer;" onClick="location.href='http://localhost:8889/searchs?page=0&sort=&psize=&brand=&category=&collection=luxury&gender=&keyword='"><img class="bannerImg"
+                                        src="../img/main/5.jpg"></div>
+                                <div class="main_banner" style="width: 100%;"><img class="bannerImg"
+                                        src="../img/main/6.jpg"></div>
+                                <div class="main_banner" style="width: 100%;"><img class="bannerImg"
+                                        src="../img/main/7.jpg"></div>
+                            </div>
+                        </div>
+                        <div class="home_card_list">
+                            <div container-index="1" class="shortcut_collection">
+                                <!---->
+                                <div class="shortcut_items_wrap shortcut_main">
+                                    <div class="shortcut_item">
+                                        <div class="shortcut_item_img_wrap" onclick="location.href='/man';">
+                                            <picture class="picture shortcut_item_img_bg"
+                                                style="background-color:#002D06;">
+                                                <img src="/img/main/men.webp"
+                                                    loading="lazy" class="image">
+                                            </picture>
+                                        </div>
+                                        <p class="shortcut_item_title">남성 추천</p>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <div class="shortcut_item_img_wrap" onclick="location.href='/woman';">
+                                            <picture class="picture shortcut_item_img_bg"
+                                                style="background-color:#222222;">
+                                                <img src="/img/main/women.webp"
+                                                    loading="lazy" class="image">
+                                            </picture>
+                                        </div>
+                                        <p class="shortcut_item_title">여성 추천</p>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <div class="shortcut_item_img_wrap" onclick="location.href='/promotion';">
+                                              <picture class="picture shortcut_item_img_bg"
+                                                style="background-color:#222222;">
+                                                <img src="/img/main/welcomedraw.webp"
+                                                    loading="lazy" class="image">
+                                            </picture>
+                                        </div>
+                                        <p class="shortcut_item_title">웰컴 드로우</p>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <div class="shortcut_item_img_wrap" onclick="location.href='http://localhost:8889/brand/Adidas';">
+                                            <picture class="picture shortcut_item_img_bg"
+                                                style="background-color:#222222;">
+                                                <img src="/img/main/brand.webp"
+                                                    loading="lazy" class="image">
+                                            </picture>
+                                        </div>
+                                        <p class="shortcut_item_title">인기 브랜드</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> Just Dropped </div>
+                                    <div class="sub_title"> 발매 상품 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="just_product">
+                                        <div class="product_item just_product" style="display: none;"><a href="/products/91394" class="item_inner">
+                                                <input type ="hidden" class="product_idx" value="">
+                                                <div class="thumb_box">
+                                                    <div class="product" style="background-color:#ebf0f5;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image justDrop_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Nike </p><!---->
+                                                    </div>
+                                                    <p class="name">(W) Nike Dunk Low Wolf Grey
+                                                        Rosewood</p><!---->
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 143,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium" id="load1"> 더보기
+                                        </a></div>
+                                        
+                                </div>
+                            </div>
+                            <div container-index="3" class="shortcut_collection">
+                                <div class="product_title lg">
+                                    <div class="title"> Brand Focus </div>
+                                    <div class="sub_title"> 추천 브랜드 </div>
+                                </div>
+                                <div class="shortcut_items_wrap">
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Vivienne%20Westwood">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/viviennewestwood.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">비비안 웨스트우드</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Polo%20Ralph%20Lauren">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/Brand_Focus2.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">폴로</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Chanel">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/chanel.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">샤넬</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Celine">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/Brand_Focus4.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">셀린느</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/AMI">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/army.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">아미</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Wooyoungmi">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/Brand_Focus11.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">우영미</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Stone%20Island">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/stone.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">스톤 아일랜드</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Lego">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/lego.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">레고</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Essentials">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/Brand_Focus9.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">에센셜</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Apple">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/apple.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">애플</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Maison%20Kitsune">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/mejong.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">메종 키츠네</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Gucci">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/Brand_Focus12.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">구찌</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Helinox">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/Brand_Focus5.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">헬리녹스</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Louis%20Vuitton">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/louisvuitton.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">루이비통</p>
+                                        </a>
+                                    </div>
+                                    <div class="shortcut_item">
+                                        <a href="http://localhost:8889/brand/Hermes">
+                                            <div class="shortcut_item_img_wrap">
+                                                <picture class="picture shortcut_item_img_bg"
+                                                    style="background-color:#f4f4f4;">
+                                                    <img src="/img/main/hermes.jpg"
+                                                        loading="lazy" class="image">
+                                                </picture>
+                                            </div>
+                                            <p class="shortcut_item_title">에르메스</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div container-index="4" class="banner lg" onClick="location.href='http://localhost:8889/searchs?page=0&sort=wishCount,desc&psize=&brand=&category=&collection=&gender=&keyword='" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color:#D3D3D3;">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner1.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> Most Popular </div>
+                                    <div class="sub_title"> 인기 상품 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="pop_product">
+                                        <div class="product_item pop_product" style="display: none;"><a href="/products/51930" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                                <div class="thumb_box">
+                                                    <div class="product" style="background-color:#f4f4f4;">
+                                                        <picture class="picture product_img">
+                                                            <img src=""
+                                                                loading="lazy" class="image pop_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Apple </p><!---->
+                                                    </div>
+                                                    <p class="name">Apple AirPods Max Silver (Korean
+                                                        Ver.)</p>
+                                                    <div class="badge badge_product shipping_express"> 빠른배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 756,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium " id="load2"> 더보기
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div class="social_style_slide" container-index="6">
+                                <div class="style_title">
+                                    <p>Style Picks!</p><!---->
+                                </div>
+                                <div>
+                                    <div id="sc_slider_div" style="width: 1298px;">
+                                        <div class="style_banner style_item1" style="width: 180px;">
+                                            <input type ="hidden" class="style_idx" value="">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card style_img">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile style_proimg"></div>
+                                                <p class="user_name">@lee_4_for_
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@phw55</p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@imdaram</p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@hothada_
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@8mnmnm</p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@abcdefuck_u
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@hya999</p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@p___p</p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@02.__.14
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@sunghann
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@bipresent
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="style_banner" style="width: 180px;">
+                                            <a class="card_link"><img
+                                                    src=""
+                                                    alt="스타일 카드" class="img_card">
+                                                <div class="profile_img_box"><img
+                                                        src=""
+                                                        alt="사용자 프로필 이미지" class="img_profile"></div>
+                                                <p class="user_name">@j0jn0_ftf
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div container-index="7" class="banner lg" onClick="location.href='http://localhost:8889/searchs?sort=idx&page=0&category=%EC%8B%A0%EB%B0%9C'" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color:#D0DAC1;">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner2.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> New In </div>
+                                    <div class="sub_title"> 신규 등록 상품 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="newin_product">
+                                        <div class="product_item newin_product" style="display: none;"><a href="/products/91332" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color:#f4f4f4;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image newIn_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Vinyl &amp; CD </p>
+                                                        <!---->
+                                                    </div>
+                                                    <p class="name">IU Pieces : Winter of a
+                                                        Twenty-Nine Year Old Blu-ray &amp; DVD</p><!---->
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 170,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium" id="load3"> 더보기
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div container-index="9" class="banner lg" onClick="location.href='http://localhost:8889/searchs?page=0&sort=firstPrice,asc&psize=&brand=&category=&collection=&gender=&keyword='" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color:#1960A0;">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner3.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> Shopping Wisely </div>
+                                    <div class="sub_title"> 정가보다 저렴한 가격! </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="wisely_product">
+                                        <div class="product_item wisely_product" style="display: none;"><a href="/products/83201" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color:#f4f4f4;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image shoppingWisely_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> AMI </p><!---->
+                                                    </div>
+                                                    <p class="name">AMI Paris France Sweatshirt Black
+                                                    </p><!---->
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 239,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium" id="load4"> 더보기
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div container-index="11" class="banner mo" onClick="location.href='http://localhost:8889/searchs?page=0&sort=&psize=&brand=&category=&collection=luxury&gender=&keyword='" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color:#DAD8C6;">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner4.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> Brand MD's Pick! </div>
+                                    <div class="sub_title"> 브랜드관 BEST 아이템 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="brandmd_product">
+                                        <div class="product_item brandmd_product" style="display: none;"><a href="/products/82490" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color:#f4f4f4;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image brandMdPicks_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Say Touche </p>
+                                                    </div>
+                                                    <p class="name">Say Touche Gallery Mirror Multi
+                                                    </p>
+                                                    <div class="badge badge_product shipping_brand"> 브랜드배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 160,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium" id="load5"> 더보기
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div container-index="13" class="banner lg" onClick="location.href='http://localhost:8889/searchs?keyword=%EB%B8%94%EB%9E%99'" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color:#C4C4D0;">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner5.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> Simple &amp; Chic </div>
+                                    <div class="sub_title"> 심플한 로고 플레이의 매력 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="simple_product">
+                                        <div class="product_item simple_product" style="display: none;"><a href="/products/87310" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color:#f4f4f4;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image simpleChic_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Saint Laurent </p>
+                                                        <!---->
+                                                    </div>
+                                                    <p class="name">Saint Laurent Cassandre Matelasse
+                                                        Bill Pouch in Grain De Poudre Embossed Leather Black Sliver</p>
+                                                    <!---->
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 536,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium" id="load6"> 더보기
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div container-index="15" class="banner mo" onClick="location.href='http://localhost:8889/searchs?sort=idx&page=0&category=%EC%9D%98%EB%A5%98'" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color:#8D99AB;">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner6.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> BEST Apparel Collabs </div>
+                                    <div class="sub_title"> 의류에도 불었던 콜라보 열풍 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="collabs_product">
+                                        <div class="product_item collabs_product" style="display: none;"><a href="/products/65385" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color:#f4f4f4;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image bestApprelCollabs_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Supreme </p><!---->
+                                                    </div>
+                                                    <p class="name">Supreme x The North Face Trekking
+                                                        Convertible Jacket Stone - 22SS</p>
+                                                    <div class="badge badge_product shipping_express"> 빠른배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 620,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium" id = "load7"> 더보기
+                                        </a></div>
+                                </div>
+                            </div>
+
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> New Lowest Asks </div>
+                                    <div class="sub_title"> 새로운 즉시 구매가 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="newlowest_product">
+                                        <div class="product_item newlowest_product" style="display: none;"><a href="/products/88020" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color:#f4f4f4;">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image newLowestAsks_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Ader Error </p><!---->
+                                                    </div>
+                                                    <p class="name">Ader Error x Zara Jogger Pants
+                                                        Grey</p>
+                                                    <div class="badge badge_product shipping_express"> 빠른배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 156,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product" style="display:block;"><a href="#"
+                                            class="btn outlinegrey medium" id="load8"> 더보기
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> New Highest Bids </div>
+                                    <div class="sub_title"> 새로운 즉시 판매가 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="newhighest_product">
+                                        <div class="product_item newhighest_product" style="display: none;"><a href="/products/50812" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color: rgb(244, 244, 244);">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image newHighestBids_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Stussy </p><!---->
+                                                    </div>
+                                                    <p class="name">Stussy Fuzzy Dice T-Shirt Black
+                                                    </p>
+                                                    <div class="badge badge_product shipping_express"> 빠른배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 76,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 판매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product"><a href="#" class="btn outlinegrey medium" id="load9"> 더보기 </a></div>
+                                </div>
+                            </div>
+                            <div class="banner lg" container-index="21" onClick="location.href='http://localhost:8889/searchs?sort=idx&page=0&category=%ED%85%8C%ED%81%AC'" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color: rgb(201, 213, 219);">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner7.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> Upcoming Release </div>
+                                    <div class="sub_title"> 발매 예정 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="coming">
+                                        <div class="product_item coming" style="display: none;"><a href="/products/91562" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color: rgb(244, 244, 244);">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image upcomingRelease_img">
+                                                        </picture><!---->
+                                                        <div class="product_date">
+                                                            <p class="month"><em>12 </em>월 </p>
+                                                            <p class="day">28</p>
+                                                        </div><!----><!----><a href="#" aria-label="관심상품"
+                                                            class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> New Balance </p>
+                                                        <!---->
+                                                    </div>
+                                                    <p class="name">New Balance 990v3 Made in USA
+                                                        Green Purple</p><!----><!---->
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product"><a href="#" class="btn outlinegrey medium" id="load10"> 더보기 </a></div>
+                                </div>
+                            </div>
+                            <div class="banner lg" container-index="23" onClick="location.href='http://localhost:8889/brand/Lego'" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color: rgb(214, 204, 190);">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner8.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> BEST Collectibles </div>
+                                    <div class="sub_title"> 키덜트들 취향저격 200% </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="bestcol_product">
+                                        <div class="product_item bestcol_product" style="display: none;"><a href="/products/39823" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color: rgb(244, 244, 244);">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image bestCollectibles_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Lego </p><!---->
+                                                    </div>
+                                                    <p class="name">Lego Pet Shop</p>
+                                                    <div class="badge badge_product shipping_express"> 빠른배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 220,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                    <div class="btn_product"><a href="#" class="btn outlinegrey medium" id="load11"> 더보기 </a></div>
+                                </div>
+                            </div>
+                            <div class="banner lg" container-index="25">
+                                <div class="banner_item" style="background-color: rgb(104, 90, 90);">
+                                    <div class="item_inner">
+                                        <div class="img_box"><img
+                                                src="/img/main/banner9.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> BEST Jewelry &amp; Watches </div>
+                                    <div class="sub_title"> 올해를 빛내준 액세서리 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="jew_product">
+                                        <div class="product_item jew_product" style="display: none;"><a href="/products/43350" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color: rgb(244, 244, 244);">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image bestJewelryWatches_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Rolex </p><!---->
+                                                    </div>
+                                                    <p class="name">Rolex Submariner Date 126610LV
+                                                    </p>
+                                                    <div class="badge badge_product shipping_express"> 빠른배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 20,220,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product"><a href="#" class="btn outlinegrey medium" id="load12"> 더보기 </a></div>
+                                </div>
+                            </div>
+                            <div class="banner lg" container-index="27" onClick="location.href='http://localhost:8889/brand/Helinox'" style="cursor:pointer;">
+                                <div class="banner_item" style="background-color: rgb(234, 224, 228);">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <img
+                                                src="/img/main/banner10.jpg"
+                                                alt="banner" fetchpriority="high" class="banner_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home_products">
+                                <div class="product_title lg">
+                                    <div class="title"> BEST Camping Gear </div>
+                                    <div class="sub_title"> 캠핑의 매력에 빠진 한 해 </div>
+                                </div>
+                                <div class="product_list_wrap lg">
+                                    <div class="product_list list_first" id="camping_product">
+                                        <div class="product_item camping_product" style="display: none;"><a href="/products/51404" class="item_inner">
+                                            <input type ="hidden" class="product_idx" value="">
+                                            <div class="thumb_box">
+                                                    <div class="product" style="background-color: rgb(244, 244, 244);">
+                                                        <picture class="picture product_img">
+                                                            <img src="" loading="lazy" class="image bestCampingGear_img">
+                                                        </picture><!----><!----><!----><!----><a href="#"
+                                                            aria-label="관심상품" class="btn_wish"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="info_box">
+                                                    <div class="brand"><!---->
+                                                        <p class="brand-text"> Helinox </p><!---->
+                                                    </div>
+                                                    <p class="name">Helinox Tactical Sunset Chair
+                                                        Duck Camo</p>
+                                                    <div class="badge badge_product shipping_express"> 빠른배송 </div>
+                                                    <div class="price">
+                                                        <div class="amount lg"><!----><em class="num"> 210,000원 </em>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p>즉시 구매가</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+
+                                    </div>
+                                    <div class="btn_product"><a href="#" class="btn outlinegrey medium" id="load13"> 더보기 </a></div>
+                                </div>
+                            </div>
+                            <div class="list_loading" style="display: none;"><img src="/_nuxt/img/loading.410eb77.gif"
+                                    alt="리스트 로딩중입니다." class="loading_img"></div>
+                        </div>
+                    </div>
+                    <div class="banner_bottom lg"><a href="#" class="banner_box">
+                            <img src="../img/main/home_banner_bottom1.79549cb.png" loading="lazy" width="350"
+                                height="200" alt="SERVICE GUIDE" class="bg" data-v-e5d8b6f4="">
+                            <div class="banner_info"><strong class="info_subtitle">service guide</strong>
+                                <p class="info_title">KREAM은 처음이지? <br>서비스 소개를 확인해보세요.</p><span class="info_txt">서비스
+                                    안내</span>
+                            </div>
+                        </a><a href="#" class="banner_box">
+                            <img src="../img/main/home_banner_bottom2.0077547.png" loading="lazy" width="350"
+                                height="200" alt="DOWNLOAD THE APP" class="bg">
+                            <div class="banner_info"><strong class="info_subtitle">download the app</strong>
+                                <p class="info_title">KREAM 앱을 설치하여 <br>한정판 스니커즈를 FLEX 하세요!</p><span class="info_txt">앱
+                                    설치하기</span>
+                            </div>
+                        </a><!----></div><!----><!----><button class="btn_top lg" style="">
+                            <img class="ico-top icon sprite-icons" src="../img/main/top.png">
+                        </button>
+                        <button class="btn_bottom lg" style="">
+                            <img class="ico-bottom icon sprite-icons" src="../img/main/bottom.png">
+                        </button>
+
+                </div>
+                <div class="footer lg">
+                    <div class="inner">
+                        <div class="service_area">
+                            <div class="customer_service"><strong class="service_title">고객센터<a href="tel:1588-7813"
+                                        class="sevice_tel">1588-7813</a></strong>
+                                <div class="service_time">
+                                    <dl class="time_box">
+                                        <dt class="time_term">운영시간 평일 11:00 - 18:00 (토∙일, 공휴일 휴무)
+                                            점심시간 평일 13:00 - 14:00</dt>
+                                    </dl>
+                                </div>
+                                <p class="service_noti">1:1 문의하기는 앱에서만 가능합니다.</p>
+                                <div class="service_btn_box"><a href="#" class="btn solid small"> 자주 묻는 질문 </a></div>
+                            </div>
+                            <div class="footer_menu">
+                                <div class="menu_box"><strong class="menu_title">이용안내</strong>
+                                    <ul class="menu_list">
+                                        <li class="menu_item">
+                                            <a href="/auth_policy" class="menu_link" onclick="pop_auth_policy()"> 검수기준 </a></li>
+                                        <li class="menu_item">
+                                            <a href="/faq" class="menu_link" onclick="pop_faq()"> 이용정책 </a></li>
+                                        <li class="menu_item"><a href="/penalty" class="menu_link"> 페널티 정책 </a></li>
+                                        <li class="menu_item"><a href="/guide" class="menu_link"> 커뮤니티 가이드라인 </a></li>
+                                    </ul>
+                                </div>
+                                <!-- 검수기준 -->
+
+                                <!-- 검수기준 끝-->
+                                <!-- 이용정책-->
+
+
+                                <!-- 이용정책 끝-->
+                                <div class="menu_box"><strong class="menu_title">고객지원</strong>
+                                    <ul class="menu_list">
+                                        <li class="menu_item"><a href="/notice" class="menu_link">공지사항</a></li>
+                                        <li class="menu_item"><a href="https://kream.co.kr/about/" target="_blank" class="menu_link">서비스
+                                                소개</a></li>
+                                        <li class="menu_item"><a href="https://kream.co.kr/showroom" target="_self" class="menu_link"> 쇼룸
+                                                안내 </a></li>
+                                        <li class="menu_item"><a href="https://kream.co.kr/about/seller_reception" target="_blank"
+                                                class="menu_link">판매자 방문접수</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="corporation_area">
+                            <ul class="term_list">
+                                <li class="term_item"><a href="https://www.kreamcorp.com/" target="_blank"
+                                        rel="noopener noreferrer" class="term_link">
+                                        회사소개 </a></li>
+                                <li class="term_item"><a href="https://recruit.kreamcorp.com/" target="_blank"
+                                        rel="noopener noreferrer" class="term_link">
+                                        인재채용 </a></li>
+                                <li class="term_item" style="display: none;"><a
+                                        href="https://www.kreamcorp.com/view/contact.html" target="_blank"
+                                        rel="noopener noreferrer" class="term_link"> 제휴제안 </a></li>
+                                <li class="term_item"><a href="#" class="term_link"> 이용약관 </a></li>
+                                <li class="term_item privacy"><a href="#" class="term_link"> 개인정보처리방침 </a></li>
+                            </ul>
+                            <div class="footer_sns">
+                                <div class="sns_box"><a href="#" aria-label="인스타그램" class="sns"><svg
+                                            xmlns="http://www.w3.org/2000/svg" class="ico-instagram icon sprite-icons">
+                                            <use href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-instagram"
+                                                xlink:href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-instagram">
+                                            </use>
+                                        </svg></a><a href="#" aria-label="페이스북" class="sns"><svg
+                                            xmlns="http://www.w3.org/2000/svg" class="ico-facebook icon sprite-icons">
+                                            <use href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-facebook"
+                                                xlink:href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-facebook">
+                                            </use>
+                                        </svg></a><a href="#" aria-label="카카오톡" class="sns"><svg
+                                            xmlns="http://www.w3.org/2000/svg" class="ico-talk icon sprite-icons">
+                                            <use href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-talk"
+                                                xlink:href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-ico-talk">
+                                            </use>
+                                        </svg></a></div><button class="btn_business"> 사업자정보 <svg
+                                        xmlns="http://www.w3.org/2000/svg" class="arr-down icon sprite-icons">
+                                        <use href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-arr-down"
+                                            xlink:href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-arr-down"></use>
+                                    </svg></button>
+                            </div>
+                            <div class="business_info">
+                                <div class="info_list">
+                                    <dl class="info_item">
+                                        <dt class="business_title">크림 주식회사 · 대표 김창욱<br>사업자등록번호 :
+                                            570-88-01618 <a
+                                                href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=5708801618">사업자정보확인</a><br>통신판매업
+                                            : 제 2021-성남분당C-0093호<br>사업장소재지 : 경기도 성남시 분당구 분당내곡로 131 판교테크원 타워1, 8층<br>호스팅
+                                            서비스 : 네이버 클라우드 ㈜</dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notice_area">
+                            <p class="notice">크림(주)는 통신판매 중개자로서 통신판매의 당사자가 아니므로 개별 판매자가 등록한 상품정보에 대해서
+                                책임을 지지 않습니다. 단, 거래과정에서 검수하고 보증하는 내용에 대한 책임은 당사에 있습니다.</p>
+                            <p class="copyright">© KREAM Corp.</p>
+                        </div>
+                    </div><!----><!----><!----><!----><!---->
+                </div>
+                <div><!---->
+                    <div id="toast" class="toast lg">
+                        <div class="wrap"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon sprite-icons toast-icon toast-success">
+                                <use href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-toast-success"
+                                    xlink:href="/_nuxt/3182c3b1ca2f77da7bc3e1acf109306c.svg#i-toast-success"></use>
+                            </svg>
+                            <div class="toast-content">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--<script>-->
+<!--    // 상단 배너 슬릭슬라이드 -->
+<!--    $(function () {-->
+<!--        $('#slider-div').slick({-->
+<!--            slide: 'div',        //슬라이드 되어야 할 태그 ex) div, li -->
+<!--            infinite: true,     //무한 반복 옵션     -->
+<!--            slidesToShow: 1,        // 한 화면에 보여질 컨텐츠 개수-->
+<!--            slidesToScroll: 1,        //스크롤 한번에 움직일 컨텐츠 개수-->
+<!--            speed: 100,     // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)-->
+<!--            arrows: true,         // 옆으로 이동하는 화살표 표시 여부-->
+<!--            dots: true,         // 스크롤바 아래 점으로 페이지네이션 여부-->
+<!--            autoplay: true,            // 자동 스크롤 사용 여부-->
+<!--            autoplaySpeed: 3000,         // 자동 스크롤시 다음으로 넘어가는데 걸리는 시간 (ms)-->
+<!--            pauseOnHover: true,        // 슬라이드 이동시 마우스 호버하면 슬라이더 멈추게 설정-->
+<!--            vertical: false,        // 세로 방향 슬라이드 옵션-->
+<!--            prevArrow: "<i class='prev_arrow fa-solid fa-chevron-left'></i>",        // 이전 화살표 모양 설정-->
+<!--            nextArrow: "<i class='next_arrow fa-solid fa-chevron-right'></i>",        // 다음 화살표 모양 설정-->
+<!--            dotsClass: "slick-dots",     //아래 나오는 페이지네이션(점) css class 지정-->
+<!--            draggable: true    //드래그 가능 여부 -->
+
+<!--        });-->
+<!--    })-->
+<!--</script>-->
+
+<!--<script type="text/javascript">-->
+<!--    // 배너 리사이즈 기능-->
+<!--    $(document).ready(function () {-->
+
+<!--        $(".bannerImg").width($(window).width());-->
+
+<!--        $(".main_banner").width($(".bannerImg").width());-->
+
+<!--        $(".main_banner").height($(".bannerImg").height());-->
+
+<!--    });-->
+
+<!--    $(window).resize(function () {-->
+
+<!--        $(".bannerImg").width($(window).width());-->
+
+<!--        $(".main_banner").width($(".bannerImg").width());-->
+
+<!--        $(".main_banner").height($(".bannerImg").height());-->
+
+<!--    });-->
+
+<!--    // 레이어창 열고 닫기 기능-->
+
+<!--    function close_search(){-->
+<!--    document.querySelector('.layer_search').style.display="none"-->
+<!--    document.querySelector('body').classList.remove('test');-->
+<!--    //큰애 스느롤 다시 보아가-->
+<!--//.layer_search를 선택하고! 스타일을 줍니다! 안보이도록!-->
+<!--    -->
+<!--}-->
+<!--function pop_search(){-->
+<!--    document.querySelector('.layer_search').style.display="block"-->
+<!--    document.querySelector('body').classList.add('test');-->
+<!--    //큰애 스크롤 없애기 - -->
+<!--//.layer_search를 선택하고! 스타일을 줍니다! 보이도록!-->
+<!--}-->
+<!--function close_auth_policy(){-->
+<!--    document.querySelector('.layer_auth_policy').style.display="none"-->
+<!--    //큰애 스느롤 다시 보아가-->
+<!--//.layer_auth_policy를 선택하고! 스타일을 줍니다! 안보이도록!-->
+<!--    -->
+<!--}-->
+<!--function pop_auth_policy(){-->
+<!--    document.querySelector('.layer_auth_policy').style.display="block"-->
+<!--    //큰애 스크롤 없애기 - -->
+<!--//.layer_auth_policy를 선택하고! 스타일을 줍니다! 보이도록!-->
+<!--}-->
+<!--function close_faq(){-->
+<!--    document.querySelector('.layer_faq').style.display="none"-->
+<!--    //큰애 스느롤 다시 보아가-->
+<!--//.layer_auth_policy를 선택하고! 스타일을 줍니다! 안보이도록!-->
+<!--    -->
+<!--}-->
+<!--function pop_faq(){-->
+<!--    document.querySelector('.layer_faq').style.display="block"-->
+<!--    //큰애 스크롤 없애기 - -->
+<!--//.layer_auth_policy를 선택하고! 스타일을 줍니다! 보이도록!-->
+<!--}-->
+<!--</script>-->
+<!--<script>-->
+<!--    // 스타일 슬릭 슬라이드-->
+<!--    $(function () {-->
+<!--        $('#sc_slider_div').slick({-->
+<!--            slide: 'div',        //슬라이드 되어야 할 태그 ex) div, li -->
+<!--            infinite: true,     //무한 반복 옵션     -->
+<!--            slidesToShow: 6,        // 한 화면에 보여질 컨텐츠 개수-->
+<!--            slidesToScroll: 1,        //스크롤 한번에 움직일 컨텐츠 개수-->
+<!--            speed: 100,     // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)-->
+<!--            arrows: true,         // 옆으로 이동하는 화살표 표시 여부-->
+<!--            dots: false,         // 스크롤바 아래 점으로 페이지네이션 여부-->
+<!--            autoplay: true,            // 자동 스크롤 사용 여부-->
+<!--            autoplaySpeed: 3000,         // 자동 스크롤시 다음으로 넘어가는데 걸리는 시간 (ms)-->
+<!--            pauseOnHover: true,        // 슬라이드 이동시 마우스 호버하면 슬라이더 멈추게 설정-->
+<!--            vertical: false,        // 세로 방향 슬라이드 옵션-->
+<!--            prevArrow: "<i class='sc_prev_arrow fa-solid fa-chevron-left'></i>",        // 이전 화살표 모양 설정-->
+<!--            nextArrow: "<i class='sc_next_arrow fa-solid fa-chevron-right'></i>",        // 다음 화살표 모양 설정-->
+<!--            draggable: true    //드래그 가능 여부 -->
+
+<!--        });-->
+<!--    })-->
+<!--</script>-->
+<!--<script>-->
+<!--    // 더보기 기능-->
+<!--    $(function(){-->
+<!--        $(".just_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load1").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".just_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".just_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인-->
+<!--                document.querySelector("#load1").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".pop_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load2").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".pop_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".pop_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인-->
+<!--                document.querySelector("#load2").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".newin_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load3").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".newin_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".newin_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인-->
+<!--                document.querySelector("#load3").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".wisely_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load4").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".wisely_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".wisely_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인 -->
+<!--                document.querySelector("#load4").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".brandmd_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load5").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".brandmd_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".brandmd_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인 -->
+<!--                document.querySelector("#load5").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".simple_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load6").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".simple_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".simple_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인-->
+<!--                document.querySelector("#load6").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".collabs_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load7").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".collabs_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".collabs_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인 -->
+<!--                document.querySelector("#load7").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".newlowest_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load8").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".newlowest_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".newlowest_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인  -->
+<!--                document.querySelector("#load8").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".newhighest_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load9").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".newhighest_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".newhighest_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인   -->
+<!--                document.querySelector("#load9").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".coming").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load10").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".coming:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".coming:hidden").length == 0){ // 컨텐츠 남아있는지 확인  -->
+<!--                document.querySelector("#load10").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".bestcol_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load11").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".bestcol_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".bestcol_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인  -->
+<!--                document.querySelector("#load11").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".jew_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load12").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".jew_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".jew_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인  -->
+<!--                document.querySelector("#load12").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--        $(".camping_product").slice(0, 4).show(); // 초기갯수-->
+<!--        $("#load13").click(function(e){ // 클릭시 more-->
+<!--            e.preventDefault();-->
+<!--            $(".camping_product:hidden").slice(0, 4).show(); // 클릭시 more 갯수 지저정-->
+
+<!--            if($(".camping_product:hidden").length == 0){ // 컨텐츠 남아있는지 확인  -->
+<!--                document.querySelector("#load1").style.display="none"-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--    </script>-->
+<!--    -->
+<!--    <script>-->
+<!--        // 스크롤 상하단 버튼튼-->
+
+<!--        // $(window).scroll(function(){-->
+<!--        //     if ($(this).scrollTop() > 300){-->
+<!--        //         $('.btn_top').show();-->
+<!--        //     } else{-->
+<!--        //         $('.btn_top').hide();-->
+<!--        //     }-->
+<!--        // });-->
+<!--        $('.btn_top').click(function(){-->
+<!--            $('html, body').animate({scrollTop:0},10);-->
+<!--            return false;-->
+<!--        });-->
+<!--        $(".btn_bottom").click(function() {-->
+<!--        $('html').animate({scrollTop : ($('.notice_area').offset().top)}, 10);-->
+<!--    });-->
+<!--        </script>-->
+
+<script src="/js/main/mainpage.js"></script>
+<script>
+    (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.")}var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(args){ch.q.push(args)};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x)}}if(document.readyState==="complete"){l()}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l)}})();
+
+    ChannelIO('boot', {
+        "pluginKey": "56be54f8-9fc4-4665-b715-c0471acc4c8b"
+    });
+</script>
+</html>

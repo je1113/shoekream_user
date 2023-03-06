@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STYLE | SHEOKREAM</title>
+  <!-- <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico"> -->
+  <link rel="stylesheet" href="/css/social/upload.css">
+  <link rel="stylesheet" href="/css/social/users.css">
+  <link rel="stylesheet" href="/css/fragment/footer.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="__nuxt">
+    <div id="__layer">
+      <!-- 헤더 -->
+      <header th:replace="/fragment/header :: header"></header>
+      <!-- 헤더 끝 -->
+
+
+
+
+      <div class="join_area" style="width: 800px;">
+
+        <div class="upload_header scroll join_title" style="position: fixed; z-index: 999;padding-top: 20px;width: 800px;">
+          <a href="javascript:history.back();" class="close_icon">
+            <img src="/img/4781857_arrow_arrows_back_direction_left_icon.png" alt="취소 이미지" class="close_icon">
+          </a>
+          <h3>STYLE UPLOAD</h3>
+          <a id="submit" class="submit" style="color: white; font-size: 20px; text-align: center;padding-top: 3px;" >전송</a>
+        </div>
+
+        <div style="margin-top: 200px;">
+          <!-- 사진 박스 시작 -->
+          <div class="input_box">
+            <h3 class="input_title ess ph">사진 추가하기</h3>
+            <div class="input_item" style="border: none; height: 650px;
+                      border-bottom: 0.1rem solid #ebebeb;">
+              <input id="imgUpload" type="file" name="imgUpload" onchange="readImage(this)" style="border: none; margin-top: 0.1rem solid #ebebeb;" accept="image/*" class="input_txt in_essValue">
+              <div class="preview">
+                <img src="https://dummyimage.com/400x400/ffffff/000000.png&text=preview+image" style="width: 400px; display: block;"
+                  alt="" id="previewImage" >
+              </div>
+            </div>
+          </div>
+          <!-- 사진박스 끝 -->
+
+          <!-- 글 내용 시작 -->
+          <div class="input_box">
+            <h3 class="input_title ess">글 내용</h3>
+            <div class="input_items">
+              <textarea resize="none" rows="1" oninput="resize(this)" name="content" id="content_input"
+                class="input_txt in_essValue" cols="30" row="1" placeholder="아이템과 스타일을 자랑해보세요..."></textarea>
+            </div>
+          </div>
+          <!-- 글 내용 끝 -->
+
+          <!-- 해시태그 내용 시작 -->
+          <div class="input_box">
+            <h3 class="input_title ess">해시태그</h3>
+            <h3 class="input_title ess">('#'을 제외하고 작성해 주세요.)</h3>
+            <div class="input_items">
+              <textarea resize="none" rows="1" oninput="resize(this)" name="content" id="hashtag_input"
+                        class="input_txt in_essValue" cols="30" row="1" placeholder="# "></textarea>
+            </div>
+          </div>
+          <!-- 해시태그 내용 끝 -->
+
+          <div class="input_box">
+            <h3 class="input_title ess" style="margin-bottom: 10px;">상품 태그 추가하기</h3>
+            <div class="input_item add_tag">
+              <!-- 선택된 태그 들어올 자리 시작 -->
+              <ul id="selected_product_list"></ul>
+              <!-- 선택된 태그 들어올 자리 끝 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 상품태그 추가 버튼 -->
+        <div id="tag_box">
+          <a id="tag_btn" onclick="addProducts()">
+            <img src="/img/styleImg/tag_icon.png" alt="상품 태그 아이콘" id="tag">
+          </a>
+          <div id="tag_text">상품 태그를 추가해 보세요!</div>
+        </div>
+        <!-- 상품태그 추가 버튼 끝 -->
+      </div>
+
+
+      <!-- 팝업 시작 -->
+      <div id="follower_pop" class="layer_social_user_list layer lg">
+        <div class="layer_container" style="height: 500px;">
+
+          <div class="layer_header" id="search_layer_header">
+            <img src="/img/search.png" alt="돋보기 아이콘" class="ico-close icon sprite-icons" id="search_icon">
+            <input 
+            style="border: none; border-bottom: 1px solid black; 
+            margin-top: 25px; margin-left: 100px; width: 250px;" type="text" onkeyup="search()" onkeydown="isNull(this)" class="tag_search">
+            <a class="btn_layer_close" onclick="closeSearch()">
+              <img src="/img/x.png" class="ico-close icon sprite-icons">
+            </a>
+          </div>
+          <div class="layer_content" style="margin-top: 50px;margin-top: 25px;
+                margin-left: 70px;
+                width: 300px;
+                overflow-y: scroll"
+                >
+                <!-- 상품 리스트 시작 -->
+            <div id="lists" style="display: none;">
+              <ul  class="product_list" id="search_tag_list">
+                <li class="product_item"><a
+                    class="product_link">
+                    <div  class="product" style="background-color: rgb(244, 244, 244);">
+                      <picture class="picture product_img">
+                        <source type="image/webp"
+                          srcset="">
+                        <source
+                          srcset="">
+                        <img alt="Arc'teryx Zeta SL Jacket Black"
+                          src=""
+                          loading="lazy" class="image">
+                      </picture>
+                    </div>
+                    <div  class="product_desc">
+                      <p  class="product_name">Arc'teryx Zeta SL Jacket Black</p>
+                      <div  class="price_box">
+                        <span class="amount">700,000</span><span  class="unit">원</span>
+                        <span class="tag_size">270</span>
+                      </div>
+                    </div>
+                  </a></li>
+                <li  class="product_item"><a
+                    class="product_link">
+                    <div  class="product" style="background-color: rgb(244, 244, 244);">
+                      <picture class="picture product_img">
+                        <source type="image/webp"
+                          srcset="">
+                        <source
+                          srcset="">
+                        <img alt="Salomon XT-6 ADV White"
+                          src=""
+                          loading="lazy" class="image">
+                      </picture>
+                    </div>
+                    <div  class="product_desc">
+                      <p  class="product_name">Salomon XT-6 ADV White</p>
+                      <div  class="price_box"><span 
+                          class="amount">204,000</span><span  class="unit">원</span></div>
+                    </div>
+                  </a></li>
+                <li  class="product_item"><a 
+                    class="product_link">
+                    <div  class="product" style="background-color: rgb(241, 241, 234);">
+                      <picture class="picture product_img">
+                        <source type="image/webp"
+                          srcset="">
+                        <source
+                          srcset="">
+                        <img alt="Adidas Superstar Golden Beige"
+                          src=""
+                          loading="lazy" class="image">
+                      </picture>
+                    </div>
+                    <div  class="product_desc">
+                      <p  class="product_name">Adidas Superstar Golden Beige</p>
+                      <div  class="price_box"><span 
+                          class="amount">112,000</span><span  class="unit">원</span></div>
+                    </div>
+                  </a></li>
+              </ul><!---->
+            </div>
+            <!-- 상품 리스트 끝 -->
+          </div>
+        </div>
+      </div>
+      <!-- 팝업 끝 -->
+
+    </div>
+    <!-- 푸터 -->
+<!--    <footer th:replace="/fragment/footer :: footer"></footer>-->
+    <!-- 푸터 끝 -->
+  </div>
+
+
+</body>
+
+</html>
+<script src="/js/social/upload.js"></script>
+<script>
+  window.onload = function(){
+    const items = document.querySelectorAll('gnb_item');
+    items.forEach((it) => {
+      it.classList.remove('gnb_on');
+    })
+    const item = document.getElementById('st_gnb');
+    item.classList.add('gnb_on');
+  }
+</script>

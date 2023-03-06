@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"
+    xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>STYLE | SHOEKREAM</title>
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="/css/social/trending.css">
+    <head th:replace="/fragment/footer_head :: head"></head>
+<!--    <link rel="stylesheet" href="/css/fragment/footer.css">-->
+    <style>
+        .title{
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: -.12px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        #hashtag_container{
+            position: fixed;
+            text-align: center;
+            width: 100%;
+            /* left: 50%; */
+            background: white;
+            padding: 20px;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="__nuxt">
+        <div id="__layout">
+            <div tabindex="0" class="wrap window_os lg">
+                <!-- 헤더 시작 -->
+                <div>
+                    <header th:replace="/fragment/header :: header"></header>
+                    <h2 class="title" id="hashtag_container">
+                        <span class="hashtag_text"># 오늘뭐신지</span>
+                    </h2>
+                </div>
+                <!--  헤더 끝-->
+
+                <!-- 컨테이너 -->
+                <div class="container social lg">
+                    <div class="content">
+
+                        <!-- 피드 시작 -->
+                        <div class="social_feeds">
+                            <div transition-duration="0" item-selector=".item" gutter=".gutter_item"
+                                horizontal-order="true" class="masonry_posts" id="masonry_posts"
+                                style="position: relative; height: auto;">
+                                <div class="gutter_item"></div>
+
+
+                                <!-- 한 줄 시작 -->
+
+
+                            </div>
+                            
+                        </div>
+                        <!-- 피드 끝 -->
+                    </div>
+                </div>
+                <!-- 컨테이너 끝 -->
+                <!-- 푸터 시작 -->
+                <div class="footer">
+                    <footer th:replace="/fragment/footer :: footer"></footer>
+                </div>
+                <!-- 푸터 끝 -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/social/like.js"></script>
+    <script src="/js/social/hashtag.js"></script>
+
+</body>
+
+</html>
+

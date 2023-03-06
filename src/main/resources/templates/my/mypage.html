@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head th:replace="/fragment/footer_head :: head"></head>
+    <link rel="stylesheet" href="/css/my/mypage.css">
+    <link rel="stylesheet" href="/css/fragment/mypage_navbar.css">
+    <link rel="stylesheet" href="css/fragment/footer.css">
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico">
+    <script defer src="/js/fragment/mypage_navbar.js"></script>
+    <title>마이 페이지</title>
+</head>
+
+<!--header-->
+<header th:replace="/fragment/header.html :: header"></header>
+<head th:replace="/fragment/footer_head :: head"></head>
+<!--header-->
+
+<body>
+<div id="__nuxt">
+    <!---->
+    <div id="__layout">
+        <div class="wrap win_os">
+            <!---->
+            <div class="wrap_inner">
+                <!-- head.html -->
+                <!--                <div th:replace="include/pjs_header_nav :: header_nav"></div>-->
+                <!-- head.html 끝-->
+                <!--conents-->
+                <div class="container my lg">
+                    <div>
+                        <!--snb_area start-->
+                        <!--                        <div th:replace="include/pjs_mypage_snb :: mypage_snb"></div>-->
+                        <!--snb_area end-->
+                        <!-- navbar -->
+                        <nav th:replace="/fragment/mypage_navbar::nav"></nav>
+                        <!--navbar-->
+                    </div>
+                    <div class="content_area">
+                        <div class="my_home">
+                            <div class="user_membership">
+                                <div class="user_detail">
+                                    <div class="user_thumb">
+                                        <img src="/img/profile.png" alt="사용자 이미지" class="thumb_img" id="profile_image">
+                                    </div>
+                                    <div class="user_info">
+                                        <div class="info_box">
+                                            <strong class="name">apple</strong>
+                                            <p class="email">apple@KREAM.com</p>
+                                            <div class="profile_button_wrap">
+                                                <a href="/my/profile" class="btn btn outlinegrey small" type="button"> 프로필 수정 </a>
+                                                <a class="btn btn btn_my_style outlinegrey small" type="button" th:href="@{social/profile/{idx}(idx=${member.idx})}"> 내 스타일 </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="membership_detail">
+                                    <a href="#" class="membership_item disabled">
+                                        <strong class="info" id="membership_grade"> 일반 회원 </strong>
+                                        <p class="title"> 회원 등급 </p>
+                                    </a>
+                                    <a href="/my/point" class="membership_item" id="point_layer_open">
+                                        <strong class="info"> <span id="point">0</span>P </strong>
+                                        <p class="title"> 포인트 </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="my_home_title">
+                                <h3 class="title"> 구매 내역 </h3>
+                                <a href="/my/buying" class="btn_more">
+                                    <span class="btn_txt">더보기</span>
+                                </a>
+                            </div>
+                            <div class="recent_purchase">
+                                <div class="purchase_list_tab">
+                                    <div class="tab_item total">
+                                        <a href="/my/buying" class="tab_link">
+                                            <dl class="tab_box">
+                                                <dt class="title">전체</dt>
+                                                <dd class="count" id="purchaseAllCount">0</dd>
+                                            </dl>
+                                        </a>
+                                    </div>
+                                    <div class="tab_item">
+                                        <a href="/my/buying" class="tab_link">
+                                            <dl class="tab_box">
+                                                <dt class="title">입찰 중</dt>
+                                                <dd class="count" id="purchaseBindCount">0</dd>
+                                            </dl>
+                                        </a>
+                                    </div>
+                                    <div class="tab_item">
+                                        <a href="/my/buying" class="tab_link">
+                                            <dl class="tab_box">
+                                                <dt class="title">진행 중</dt>
+                                                <dd class="count" id="purchaseContinueCount">0</dd>
+                                                <!---->
+                                            </dl>
+                                        </a>
+                                    </div>
+                                    <div class="tab_item">
+                                        <a href="/my/buying" class="tab_link">
+                                            <dl class="tab_box">
+                                                <dt class="title">종료</dt>
+                                                <dd class="count" id="purchaseEndCount">0</dd>
+                                            </dl>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="purchase_list all bid">
+                                        <!---->
+                                        <div id="buyDisplay">
+                                            <div class="purchase_list_display_item" style="background-color:#FFFFFF;">
+                                                <div class="purchase_list_product" onclick="location.href='#'">
+                                                    <div class="list_item_img_wrap">
+                                                        <img
+                                                                alt="product_image"
+                                                                src="/img/nav_close_icon.png"
+                                                                class="list_item_img"
+                                                                style="background-color: rgb(244, 244, 244);"><!---->
+                                                    </div>
+                                                    <div class="list_item_title_wrap">
+                                                        <p class="list_item_title">Maison Margiela High Top Security Sock Runners Black</p>
+                                                        <p class="list_item_description">ONE SIZE</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list_item_status">
+                                                    <div class="list_item_column column_secondary">
+                                                        <p class="secondary_title display_paragraph" style="color:#222222;">50,000원/p>
+                                                    </div>
+                                                    <div class="list_item_column column_last">
+                                                        <p class="last_title display_paragraph" style="color:#222222;"><time>기한만료</time></p>
+                                                        <p class="last_description display_paragraph"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                                <div class="empty_area">
+                                    <p class="desc">거래 내역이 없습니다.</p>
+                                </div>
+                            </div>
+                            <div class="my_home_title">
+                                <h3 class="title"> 판매 내역 </h3>
+                                <a href="/my/selling" class="btn_more">
+                                    <span class="btn_txt">더보기</span>
+                                </a>
+                            </div>
+                            <div class="recent_purchase">
+                                <div class="purchase_list_tab sell">
+                                    <div class="tab_item total">
+                                        <a href="/my/selling" class="tab_link">
+                                            <dl class="tab_box">
+                                                <dt class="title">전체</dt>
+                                                <dd class="count" id="salesAllCount">0</dd>
+                                            </dl>
+                                        </a>
+                                    </div>
+                                    <div class="tab_item">
+                                        <a href="/my/selling" class="tab_link">
+                                            <dl class="tab_box"><dt class="title">입찰 중</dt>
+                                                <dd class="count" id="salesBindCount">0</dd>
+                                            </dl>
+                                        </a>
+                                    </div>
+                                    <div class="tab_item">
+                                        <a href="/my/selling" class="tab_link">
+                                            <dl class="tab_box">
+                                                <dt class="title">진행 중</dt>
+                                                <dd class="count" id="salesContinueCount">0</dd>
+                                                <!---->
+                                            </dl>
+                                        </a>
+                                    </div>
+                                    <div class="tab_item">
+                                        <a href="/my/selling" class="tab_link">
+                                            <dl class="tab_box">
+                                                <dt class="title">종료</dt>
+                                                <dd class="count" id="salesEndCount">0</dd>
+                                            </dl>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="purchase_list all ask">
+                                        <!---->
+                                        <div id="sellDisplay">
+                                            <div class="purchase_list_display_item" style="background-color:#FFFFFF;">
+                                                <div class="purchase_list_product" onclick="location.href='#'">
+                                                    <div class="list_item_img_wrap">
+                                                        <img
+                                                                alt="product_image"
+                                                                src="/img/nav_close_icon.png"
+                                                                class="list_item_img"
+                                                                style="background-color: rgb(244, 244, 244);"><!---->
+                                                    </div>
+                                                    <div class="list_item_title_wrap">
+                                                        <p class="list_item_title">Maison Margiela High Top Security Sock Runners Black</p>
+                                                        <p class="list_item_description">ONE SIZE</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list_item_status">
+                                                    <div class="list_item_column column_secondary">
+                                                        <p class="secondary_title display_paragraph" style="color:#222222;">50,000원/p>
+                                                    </div>
+                                                    <div class="list_item_column column_last">
+                                                        <p class="last_title display_paragraph" style="color:#222222;"><time>기한만료</time></p>
+                                                        <p class="last_description display_paragraph"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="empty_area">
+                                    <p class="desc">거래 내역이 없습니다.</p>
+                                </div>
+                            </div>
+<!--                            <div class="my_home_title">-->
+<!--                                <h3 class="title"> 관심 상품 </h3>-->
+<!--                                <a href="/my/wish" class="btn_more">-->
+<!--                                    <span class="btn_txt">더보기</span>-->
+<!--                                </a>-->
+<!--                                &lt;!&ndash;&ndash;&gt;-->
+<!--                            </div>-->
+<!--                            <div class="interest_product">-->
+<!--                                &lt;!&ndash;&ndash;&gt;-->
+<!--                            </div>-->
+<!--                            <div class="empty_area has_bg">-->
+<!--                                <p class="desc">추가하신 관심 상품이 없습니다.</p>-->
+<!--                                <a href="#" class="btn outlinegrey small"> SHOP 바로가기 </a>-->
+<!--                            </div>-->
+                            <!---->
+                            <!--point layer start-->
+                            <!--                            <div th:replace="include/pjs_point_layer :: point_layer"></div>-->
+                            <!--point layer end-->
+                        </div>
+                    </div>
+                </div>
+                <!--footer start-->
+                <!--                <div th:replace="include/pjs_footer :: footer"></div>-->
+                <!--footer end-->
+                <!--mobile footer start-->
+                <!--                <div class="footer only_copy right">-->
+                <!--                    <div class="footer mo">-->
+                <!--                        <p class="copyright">© 2021 KREAM.Corp.</p>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--mobile footer end-->
+            </div>
+            <!---->
+        </div>
+    </div>
+</div>
+
+
+<!--footer 넣을곳-->
+<footer th:replace="fragment/footer.html :: footer"></footer>
+<!--footer 넣을곳-->
+<script>
+    function buyDetail(idx){
+        location.href='/my/buying/'+ idx
+    }
+    function sellDetail(idx){
+        location.href='/my/selling/'+ idx
+    }
+</script>
+</body>
+</html>
+
+

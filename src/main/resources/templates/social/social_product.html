@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"
+    xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>STYLE | SHOEKREAM</title>
+    <!-- <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://kream.co.kr/favicon.ico"> -->
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="/css/social/trending.css">
+    <link rel="stylesheet" href="/css/social/social_product.css">
+    <link rel="stylesheet" href="/css/fragment/footer.css">
+</head>
+
+
+<body>
+    <div id="__nuxt">
+        <div id="__layout">
+            <div tabindex="0" class="wrap window_os lg">
+                <!-- 헤더 시작 -->
+                <div>
+                    <header th:replace="/fragment/header :: header"></header>
+                </div>
+                <!--  헤더 끝-->
+                <input style="display: none" class="productIdx" value="">
+                <!-- 브랜드 스크롤 시작 -->
+                <div  class="social_header is_scroll"  id="brand_scroll" style="display: none; height: 60px;">
+                    <a href="" class="feed_product" style="padding-top: 15px; margin: 0 auto;">
+                        <div  class="product" style="background-color: rgb(244, 244, 244); height: 44px;padding: 0;">
+                            <img
+                                src=""
+                                alt="" class="scroll_product_img">
+                        </div>
+                        <p  class="scroll_product_name">Apple AirPods Max Silver (Korean Ver.)</p>
+                    </a>
+                </div>
+                <!-- 브랜드 스크롤 끝 -->
+
+
+                <!-- 컨테이너 -->
+                <div class="container social lg">
+                    <div class="content with_product_header">
+
+                        <!-- 브랜드 카드 시작 -->
+                        <div class="social_feed_product">
+                            <a href="/products/51930" class="product_box">
+                                <div class="product" style="background-color: rgb(244, 244, 244);">
+                                    <picture class="product_img">
+                                        <source type="image/webp"
+                                            srcset="">
+                                        <source
+                                            srcset="">
+                                        <img alt="Apple AirPods Max Silver (Korean Ver.)"
+                                            src=""
+                                            loading="lazy" class="image">
+                                    </picture>
+                                </div>
+                                <div class="product_desc">
+                                    <p class="product_name">Apple AirPods Max Silver (Korean Ver.)</p>
+                                    <div class="price_box">
+                                        <span class="amount">744,000원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 브랜드 카드 끝 -->
+
+                        <!-- <img src="../../img/styleImg/like_icon.png" alt="좋아요 이미지" class="icon sprite-icons social-like-gray-sm"> -->
+                        <!-- 피드 시작 -->
+                        <div class="social_feeds">
+                            <div transition-duration="0" item-selector=".item" gutter=".gutter_item"
+                                horizontal-order="true" class="masonry_posts"
+                                style="position: relative;">
+                                <div class="gutter_item"></div>
+                                <div class="feed_card item square" style="position: absolute; left: 0px; top: 0px;"><a
+                                        href="#">
+                                        <div class="card_box">
+                                            <div class="social_img_box square">
+                                                <picture class="picture social_img">
+                                                    <source type="image/webp"
+                                                        srcset="">
+                                                    <source
+                                                        srcset="">
+                                                    <img alt="소셜이미지"
+                                                        src=""
+                                                        loading="auto" class="image">
+                                                </picture>
+                                            </div>
+                                            <div class="card_detail">
+                                                <div class="user_box">
+                                                    <picture class="picture img_profile">
+                                                        <source type="image/webp"
+                                                            srcset="">
+                                                        <source srcset=""><img
+                                                            alt="사용자 프로필 이미지"
+                                                            src="/img/kream_empty_img.png" loading="auto"
+                                                            class="image">
+                                                    </picture>
+                                                    <p class="user_name">hytiwx</p><span aria-label="좋아요" role="button"
+                                                        class="btn like">
+                                                        <img src="/img/styleImg/like_icon.png" alt="좋아요 이미지"
+                                                            class="icon sprite-icons social-like-gray-sm">
+                                                        <span class="like_count">11</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+
+
+                            </div>
+                        </div>
+                        <!-- 피드 끝 -->
+
+
+                    </div>
+                </div>
+                <!-- 컨테이너 끝 -->
+
+
+                <!-- 푸터 시작 -->
+                <div class="footer">
+                    <footer th:replace="/fragment/footer :: footer"></footer>
+                </div>
+                <!-- 푸터 끝 -->
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+
+</html>
+<script src="/js/social/like.js"></script>
+<script src="/js/social/social_product.js"></script>
