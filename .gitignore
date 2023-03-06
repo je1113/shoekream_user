@@ -1,8 +1,9 @@
-shoekream/src/main/resources/application.yml
+shoekream_user/src/main/resources/application.yml
+shoekream_user/src/main/resources/application-oauth.yaml
+shoekream_user/src/main/resources/data.sql
+shoekreamsrc/main/resources/application.yml
 shoekream/src/main/resources/application-oauth.yaml
 shoekream/src/main/resources/data.sql
-shoekream/src/main/resources/conclusion.sql
-
 # Spring Boot 설정 파일
 application.properties
 application.yml
